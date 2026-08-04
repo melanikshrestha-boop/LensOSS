@@ -637,7 +637,7 @@
     .site{overflow:hidden}
     .site-nav{border:0!important;height:70px;background:rgba(247,246,242,.86)!important}
     .site-nav.scrolled{box-shadow:0 12px 40px rgba(16,18,18,.06)}
-    .site-hero{min-height:860px;padding:120px 6.5vw 90px;display:grid;grid-template-columns:minmax(0,.86fr) minmax(520px,1.14fr);gap:5vw;align-items:center;background:#09090b}
+    .site-hero{min-height:auto;padding:88px max(24px,3.5vw) 72px;display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);gap:20px;align-items:center;background:#09090b;width:100%;box-sizing:border-box}
     .site-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 42%,rgba(96,105,255,.19),transparent 24%),radial-gradient(circle at 20% 88%,rgba(125,234,151,.08),transparent 22%);pointer-events:none}
     .site-hero:after{display:none!important}
     .site-hero .site-kicker,.site-hero h1,.site-hero>p,.site-hero .site-actions{grid-column:1;position:relative;z-index:2}
@@ -651,17 +651,59 @@
     .site-hero>p,.site-hero .hero-proof{display:none!important}
     .site-hero .site-actions{margin-top:36px;align-self:start}
     .site-hero .hero-proof{display:none!important}
-    .hero-product{grid-column:2;grid-row:1/6;position:relative;height:min(690px,72vw);max-height:690px;border-radius:36px;overflow:hidden;background:#101014;box-shadow:0 60px 160px rgba(0,0,0,.55);isolation:isolate;transform:perspective(1400px) rotateY(-4deg) rotateX(1.5deg);transition:transform .8s cubic-bezier(.16,1,.3,1)}
-    .hero-product:hover{transform:perspective(1400px) rotateY(-1deg) rotateX(0) translateY(-6px)}
-    .hero-product-photo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,8,.06),rgba(5,5,8,.18) 55%,rgba(5,5,8,.9)),url('assets/lensos-court-v1.png') center/cover;transform:none!important;animation:none!important}
-    .hero-product-top{position:absolute;left:28px;right:28px;top:25px;z-index:2;display:flex;align-items:center;justify-content:space-between;color:#fff;font:600 11px "DM Mono"}
-    .hero-product-top b{font:700 17px "DM Sans"}.hero-product-top b i{font-style:normal;color:#9198ff}
-    .hero-product-top span{display:flex;align-items:center;gap:8px}.hero-product-top span:before{content:"";width:7px;height:7px;border-radius:50%;background:#7bea97;box-shadow:0 0 18px rgba(123,234,151,.8)}
-    .hero-command{position:absolute;z-index:3;left:7%;right:7%;bottom:108px;padding:19px 20px;border-radius:18px;background:rgba(11,11,15,.84);backdrop-filter:blur(22px);box-shadow:0 22px 70px rgba(0,0,0,.38);display:flex;gap:12px;align-items:center}
-    .hero-command input{min-width:0;flex:1;border:0;outline:0;background:transparent;color:#f4f4f5;font:500 15px "DM Sans"}.hero-command input::placeholder{color:#868690}
-    .hero-command button{border:0;border-radius:12px;background:#f1f1f4;color:#09090b;padding:12px 15px;font:700 10px "DM Mono";cursor:pointer}.hero-command button:hover{background:#aeb3ff}
-    .hero-demo-status{position:absolute;z-index:3;left:7%;right:7%;bottom:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:6px;border-radius:16px;background:rgba(7,7,10,.76);backdrop-filter:blur(18px)}
-    .hero-demo-status span{padding:12px 10px;border-radius:11px;color:#6f7079;font:600 9px "DM Mono";transition:.45s ease}.hero-demo-status span b{display:block;margin-top:5px;color:#a4a4ad;font:600 12px "DM Sans"}.hero-demo-status span.active{background:#24243a;color:#aeb3ff}.hero-demo-status span.active b{color:#fff}.hero-demo-status span.done{color:#7bea97}
+    .hero-product{grid-column:2;grid-row:1/6;position:relative;height:min(640px,68vh);border-radius:28px;overflow:hidden;background:#0c0c10;box-shadow:0 40px 100px rgba(0,0,0,.5);isolation:isolate;transform:none!important}
+    .hero-product-top{position:absolute;left:18px;right:18px;top:16px;z-index:5;display:flex;align-items:center;justify-content:space-between;color:#fff;font:600 11px "DM Mono";pointer-events:none}
+    .hero-product-top b{font:700 16px "DM Sans"}.hero-product-top b i{font-style:normal;color:#9198ff}
+    .hero-product-top span{display:flex;align-items:center;gap:8px;color:#c8c8d0}.hero-product-top span:before{content:"";width:7px;height:7px;border-radius:50%;background:#7bea97;box-shadow:0 0 14px rgba(123,234,151,.8)}
+    .hero-stage{position:absolute;inset:0;z-index:1}
+    .hero-layer{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .28s ease}
+    .hero-product[data-step="import"] .layer-import,
+    .hero-product[data-step="review"] .layer-review,
+    .hero-product[data-step="raw"] .layer-raw,
+    .hero-product[data-step="adobe"] .layer-adobe,
+    .hero-product[data-step="tonight"] .layer-tonight{opacity:1}
+    /* IMPORT: ~100 angle tiles of the same shoot — not one portrait */
+    .layer-import{background:#08080c;padding:56px 14px 88px;display:grid;place-items:center}
+    .hero-angle-grid{width:100%;height:100%;display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(8,1fr);gap:3px}
+    .hero-angle-grid i{display:block;border-radius:3px;background-image:url('assets/lensos-court-v1.png');background-size:900%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04);opacity:.88}
+    .layer-import .import-badge{position:absolute;left:18px;bottom:96px;z-index:2;padding:10px 12px;border-radius:12px;background:rgba(8,8,12,.88);color:#fff;font:600 10px "DM Mono";backdrop-filter:blur(12px)}
+    .layer-import .import-badge span{display:block;color:#9a9aa4;font:700 8px "DM Mono";letter-spacing:.08em}
+    .layer-import .import-badge b{display:block;margin-top:4px;font:650 18px "DM Sans";letter-spacing:-.04em;color:#b7bcff}
+    /* REVIEW: LensOS at work */
+    .layer-review{background:#09090e}
+    .layer-review .review-bg{position:absolute;inset:0;background:url('assets/lensos-court-v1.png') 48% 40%/cover;filter:brightness(.35) saturate(.7)}
+    .layer-review .review-panel{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);width:min(420px,86%);padding:18px 18px 16px;border-radius:18px;background:rgba(12,12,18,.92);box-shadow:0 24px 80px rgba(0,0,0,.55);color:#fff}
+    .layer-review .review-panel small{display:block;color:#8d91ff;font:700 9px "DM Mono";letter-spacing:.08em}
+    .layer-review .review-panel strong{display:block;margin-top:8px;font:650 22px "DM Sans";letter-spacing:-.04em}
+    .layer-review .review-meter{margin-top:14px;height:6px;border-radius:999px;background:#22222c;overflow:hidden}
+    .layer-review .review-meter i{display:block;width:72%;height:100%;background:linear-gradient(90deg,#6b72ff,#aeb3ff)}
+    .layer-review .review-stats{margin-top:12px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+    .layer-review .review-stats span{padding:10px 8px;border-radius:10px;background:#16161e;font:600 9px "DM Mono";color:#8e8e98}
+    .layer-review .review-stats span b{display:block;margin-top:4px;color:#f0f0f4;font:650 14px "DM Sans"}
+    /* RAW: flat unedited */
+    .layer-raw .raw-still{position:absolute;inset:0;background:url('assets/lensos-court-v1.png') center/cover;filter:saturate(.55) contrast(.92) brightness(.95)}
+    .layer-raw .raw-tag{position:absolute;left:18px;top:58px;padding:8px 11px;border-radius:999px;background:rgba(0,0,0,.7);color:#e8e8ec;font:700 10px "DM Mono"}
+    /* ADOBE: grade + 3 minutes */
+    .layer-adobe .adobe-still{position:absolute;inset:0;background:url('assets/lensos-court-v1.png') center/cover;filter:saturate(1.25) contrast(1.1) brightness(1.05)}
+    .layer-adobe .adobe-bar{position:absolute;left:16px;right:16px;bottom:96px;padding:14px 16px;border-radius:14px;background:rgba(8,8,12,.9);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;font:700 10px "DM Mono";backdrop-filter:blur(12px)}
+    .layer-adobe .adobe-bar em{font:normal 650 13px "DM Sans";color:#b0b5ff;font-style:normal}
+    /* TONIGHT: letters MUST be visible */
+    .layer-tonight{background:#07070b;display:grid;place-items:center;padding:40px 24px 100px}
+    .layer-tonight .tonight-copy{text-align:center;max-width:92%}
+    .layer-tonight .tonight-copy small{display:block;color:#aeb3ff;font:700 11px "DM Mono";letter-spacing:.14em}
+    .layer-tonight .tonight-copy strong{display:block;margin-top:14px;color:#fff;font:650 clamp(28px,4.2vw,48px)/1.05 "DM Sans";letter-spacing:-.055em;text-shadow:0 2px 0 rgba(0,0,0,.4),0 18px 40px rgba(0,0,0,.55)}
+    .layer-tonight .tonight-copy strong i{font:400 1.02em "Instrument Serif";color:#c4c8ff;font-style:italic}
+    /* Step row */
+    .hero-steps{position:absolute;left:12px;right:12px;bottom:12px;z-index:6;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+    .hero-step{border:0;border-radius:12px;padding:10px 8px;background:rgba(10,10,14,.82);color:#7a7a86;text-align:left;cursor:pointer;backdrop-filter:blur(12px);transition:background .2s,color .2s,box-shadow .2s}
+    .hero-step:hover,.hero-step:focus-visible{background:rgba(28,28,40,.95);color:#e4e4ea;outline:none}
+    .hero-step.is-active{background:rgba(40,40,62,.98);color:#fff;box-shadow:0 0 0 1px rgba(158,164,255,.5)}
+    .hero-step small{display:block;font:700 8px "DM Mono";letter-spacing:.05em;opacity:.75}
+    .hero-step.is-active small{color:#aeb3ff;opacity:1}
+    .hero-step b{display:block;margin-top:5px;font:650 11px/1.15 "DM Sans";letter-spacing:-.02em}
+    .site-hero .site-actions{margin-top:28px}
+    .site-hero h1{max-width:520px}
+
     .category-proof{position:relative;padding:130px 7vw 140px;background:#f7f6f2;color:#111}
     .category-head{max-width:1050px}.category-head h2{margin:22px 0 20px;font:650 clamp(56px,8vw,118px)/.88 "DM Sans";letter-spacing:-.085em}.category-head h2 i{font:400 1.05em "Instrument Serif";color:#6975ff}.category-head p{max-width:610px;color:#74746f;font-size:17px;line-height:1.55}
     .category-map{position:relative;min-height:680px;margin-top:78px;display:grid;place-items:center}
@@ -735,7 +777,7 @@
     .vertical-os-copy p{margin:0 auto;color:#7d7d85;font-size:14px;max-width:520px}
     @media(max-width:800px){.shoot-flow{aspect-ratio:4/5;border-radius:22px}.shoot-steps{grid-template-columns:1fr 1fr}.shoot-hud{left:16px;right:16px;width:auto;top:72px}.layer-review .film-strip{grid-template-columns:repeat(3,1fr)}.layer-review .film-strip i:nth-child(n+4){display:none}}
     @media(prefers-reduced-motion:reduce){.shoot-grade{transition:none}.shoot-grade:after{animation:none}}
-    @media(max-width:1000px){.site-hero{grid-template-columns:1fr;min-height:auto}.site-hero .site-kicker,.site-hero h1,.site-hero>p,.site-hero .site-actions{grid-column:1}.hero-product{grid-column:1;grid-row:auto;height:620px;margin-top:45px;transform:none}.category-map{min-height:820px}.category-node.n1,.category-node.n3{left:0}.category-node.n2,.category-node.n4{right:0}.proof-console,.economics-grid,.founding-shell{grid-template-columns:1fr}.trust-strip{grid-template-columns:1fr 1fr}.founding-copy{min-height:480px}}
+    @media(max-width:1000px){.site-hero{grid-template-columns:1fr;min-height:auto}.site-hero .site-kicker,.site-hero h1,.site-hero>p,.site-hero .site-actions{grid-column:1}.hero-product{grid-column:1;grid-row:auto;height:560px;margin-top:28px;transform:none}.hero-steps{grid-template-columns:repeat(3,1fr)}.hero-angle-grid{grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(6,1fr)}.category-map{min-height:820px}.category-node.n1,.category-node.n3{left:0}.category-node.n2,.category-node.n4{right:0}.proof-console,.economics-grid,.founding-shell{grid-template-columns:1fr}.trust-strip{grid-template-columns:1fr 1fr}.founding-copy{min-height:480px}}
     @media(max-width:680px){.site-hero{padding:88px 20px 60px}.site-hero h1{font-size:58px}.site-hero .site-actions span{display:none}.hero-product{height:560px;border-radius:25px}.hero-command{bottom:130px;left:14px;right:14px}.hero-demo-status{left:14px;right:14px;bottom:18px;grid-template-columns:1fr 1fr}.hero-product-top{left:18px;right:18px}.category-proof,.proof-lab,.economics,.founding-studios{padding:90px 22px}.category-map{min-height:auto;display:grid;grid-template-columns:1fr;gap:10px;margin-top:48px}.category-orbit{position:relative;width:250px;grid-row:1;margin:10px auto 28px}.category-core{position:absolute;top:125px}.category-node,.category-node.n1,.category-node.n2,.category-node.n3,.category-node.n4{position:relative;inset:auto;width:100%}.proof-lab-head{display:block}.proof-lab-head p{margin-top:18px}.proof-command,.proof-result{min-height:460px;padding:20px}.economics-output{grid-template-columns:1fr}.economics-metric.primary{grid-column:auto}.trust-strip{grid-template-columns:1fr;padding:60px 22px}.founding-copy,.founding-score{padding:25px;border-radius:23px}.founding-copy{min-height:430px}.founding-metric{grid-template-columns:1fr}.founding-metric em{grid-column:1;grid-row:auto;justify-self:start}.shoot-import{grid-template-columns:80px 1fr;width:90%}.shoot-import-target{grid-column:1/-1}.shoot-burst{grid-template-columns:repeat(3,1fr);height:250px}.shoot-burst i:nth-child(n+4){display:none}.shoot-captions{left:18px;top:80px}.shoot-caption{width:230px}.shoot-hero-frame{inset:12% 6%}.v3-ops-page{width:calc(100% - 30px);padding-top:42px}.v3-ops-head{display:block}.v3-ops-head p{margin-top:18px}.v3-ops-grid{grid-template-columns:1fr}.v3-ops-action{display:block}.v3-ops-action button{width:100%;margin-top:18px}}
     @media(prefers-reduced-motion:reduce){.hero-product-photo,.category-orbit{animation:none}.hero-product,.category-node{transition:none}}
   </style>
@@ -849,11 +891,8 @@
     siteHero.querySelector('.site-kicker').textContent='LENSOS / CAMERA TO CLIENT';
     const heroTaglines=[
       'Your turnaround<br><i>date is tonight.</i>',
-      'Turnaround time<br><i>is TONIGHT.</i>',
       'Export by<br><i>tonight.</i>',
-      'Shoot more.<br><i>Edit more.</i>',
-      'Card in.<br><i>Client ready.</i>',
-      'You make the<br><i>final call.</i>'
+      'Shoot more.<br><i>Edit more.</i>'
     ];
     const heroH1=siteHero.querySelector('h1');
     heroH1.innerHTML=`<span class="tagline-rotate" id="heroTagline"><span class="tagline-line tagline-fade">${heroTaglines[0]}</span></span>`;
@@ -869,7 +908,23 @@
     },4200);
     siteHero.querySelector('#heroStart').textContent='Run one shoot free →';
     siteHero.querySelector('.site-actions span').textContent='Local first · Originals untouched';
-    siteHero.insertAdjacentHTML('beforeend',`<section class="hero-product" aria-label="Interactive illustrated LensOS workflow"><div class="hero-product-photo"></div><div class="hero-product-top"><b>Lens<i>OS</i></b><span id="heroProductLive">ILLUSTRATED WORKFLOW</span></div><form class="hero-command" id="heroCommand"><input id="heroCommandInput" aria-label="Describe a LensOS workflow" value="Cull this game and deliver 40 selects tonight"><button type="submit">RUN ↗</button></form><div class="hero-demo-status" id="heroDemoStatus"><span class="active">01<b>4,128 in</b></span><span>02<b>312 candidates</b></span><span>03<b>Adobe ready</b></span><span>04<b>Link live</b></span></div></section>`);
+    siteHero.insertAdjacentHTML('beforeend',`<section class="hero-product" id="heroProduct" data-step="import" aria-label="LensOS shoot workflow"><div class="hero-product-top"><b>Lens<i>OS</i></b><span id="heroProductLive">01 / IMPORT</span></div><div class="hero-stage"><div class="hero-layer layer-import"><div class="hero-angle-grid" aria-hidden="true"><i style="background-position:0% 0%"></i><i style="background-position:7% 11%"></i><i style="background-position:14% 22%"></i><i style="background-position:21% 33%"></i><i style="background-position:28% 44%"></i><i style="background-position:35% 55%"></i><i style="background-position:42% 66%"></i><i style="background-position:49% 77%"></i><i style="background-position:56% 88%"></i><i style="background-position:63% 99%"></i><i style="background-position:70% 10%"></i><i style="background-position:77% 21%"></i><i style="background-position:84% 32%"></i><i style="background-position:91% 43%"></i><i style="background-position:98% 54%"></i><i style="background-position:5% 65%"></i><i style="background-position:12% 76%"></i><i style="background-position:19% 87%"></i><i style="background-position:26% 98%"></i><i style="background-position:33% 9%"></i><i style="background-position:40% 20%"></i><i style="background-position:47% 31%"></i><i style="background-position:54% 42%"></i><i style="background-position:61% 53%"></i><i style="background-position:68% 64%"></i><i style="background-position:75% 75%"></i><i style="background-position:82% 86%"></i><i style="background-position:89% 97%"></i><i style="background-position:96% 8%"></i><i style="background-position:3% 19%"></i><i style="background-position:10% 30%"></i><i style="background-position:17% 41%"></i><i style="background-position:24% 52%"></i><i style="background-position:31% 63%"></i><i style="background-position:38% 74%"></i><i style="background-position:45% 85%"></i><i style="background-position:52% 96%"></i><i style="background-position:59% 7%"></i><i style="background-position:66% 18%"></i><i style="background-position:73% 29%"></i><i style="background-position:80% 40%"></i><i style="background-position:87% 51%"></i><i style="background-position:94% 62%"></i><i style="background-position:1% 73%"></i><i style="background-position:8% 84%"></i><i style="background-position:15% 95%"></i><i style="background-position:22% 6%"></i><i style="background-position:29% 17%"></i><i style="background-position:36% 28%"></i><i style="background-position:43% 39%"></i><i style="background-position:50% 50%"></i><i style="background-position:57% 61%"></i><i style="background-position:64% 72%"></i><i style="background-position:71% 83%"></i><i style="background-position:78% 94%"></i><i style="background-position:85% 5%"></i><i style="background-position:92% 16%"></i><i style="background-position:99% 27%"></i><i style="background-position:6% 38%"></i><i style="background-position:13% 49%"></i><i style="background-position:20% 60%"></i><i style="background-position:27% 71%"></i><i style="background-position:34% 82%"></i><i style="background-position:41% 93%"></i><i style="background-position:48% 4%"></i><i style="background-position:55% 15%"></i><i style="background-position:62% 26%"></i><i style="background-position:69% 37%"></i><i style="background-position:76% 48%"></i><i style="background-position:83% 59%"></i><i style="background-position:90% 70%"></i><i style="background-position:97% 81%"></i><i style="background-position:4% 92%"></i><i style="background-position:11% 3%"></i><i style="background-position:18% 14%"></i><i style="background-position:25% 25%"></i><i style="background-position:32% 36%"></i><i style="background-position:39% 47%"></i><i style="background-position:46% 58%"></i><i style="background-position:53% 69%"></i><i style="background-position:60% 80%"></i><i style="background-position:67% 91%"></i><i style="background-position:74% 2%"></i><i style="background-position:81% 13%"></i><i style="background-position:88% 24%"></i><i style="background-position:95% 35%"></i><i style="background-position:2% 46%"></i><i style="background-position:9% 57%"></i><i style="background-position:16% 68%"></i><i style="background-position:23% 79%"></i><i style="background-position:30% 90%"></i><i style="background-position:37% 1%"></i><i style="background-position:44% 12%"></i><i style="background-position:51% 23%"></i><i style="background-position:58% 34%"></i><i style="background-position:65% 45%"></i></div><div class="import-badge"><span>BASKETBALL SHOOT</span><b>4,128 angles in</b></div></div><div class="hero-layer layer-review"><div class="review-bg"></div><div class="review-panel"><small>LENSOS AT WORK</small><strong>Culling this game…</strong><div class="review-meter"><i></i></div><div class="review-stats"><span>IN<b>4,128</b></span><span>STACKS<b>486</b></span><span>KEEP<b>312</b></span></div></div></div><div class="hero-layer layer-raw"><div class="raw-still"></div><div class="raw-tag">RAW · UNEDITED</div></div><div class="hero-layer layer-adobe"><div class="adobe-still"></div><div class="adobe-bar"><span>OPEN IN ADOBE ↗</span><em>Exported in 3 minutes</em></div></div><div class="hero-layer layer-tonight"><div class="tonight-copy"><small>04 / SEND</small><strong>Your turnaround<br><i>date is tonight.</i></strong></div></div></div><div class="hero-steps" role="tablist"><button type="button" class="hero-step is-active" data-step="import"><small>01</small><b>Import</b></button><button type="button" class="hero-step" data-step="review"><small>02</small><b>Review</b></button><button type="button" class="hero-step" data-step="raw"><small>03</small><b>Raw</b></button><button type="button" class="hero-step" data-step="adobe"><small>04</small><b>Adobe</b></button><button type="button" class="hero-step" data-step="tonight"><small>05</small><b>Tonight</b></button></div></section>`);
+    (function wireHeroProduct(){
+      const box=$('heroProduct'); if(!box) return;
+      const live=$('heroProductLive');
+      const labels={import:'01 / IMPORT',review:'02 / LENSOS AT WORK',raw:'03 / RAW',adobe:'04 / ADOBE · 3 MIN',tonight:'05 / TONIGHT'};
+      function setStep(step){
+        box.dataset.step=step;
+        box.querySelectorAll('.hero-step').forEach(btn=>btn.classList.toggle('is-active',btn.dataset.step===step));
+        if(live) live.textContent=labels[step]||step;
+      }
+      box.querySelectorAll('.hero-step').forEach(btn=>{
+        btn.addEventListener('mouseenter',()=>setStep(btn.dataset.step));
+        btn.addEventListener('focus',()=>setStep(btn.dataset.step));
+        btn.addEventListener('click',()=>setStep(btn.dataset.step));
+      });
+      setStep('import');
+    })();
     const categorySection=document.createElement('section');
     categorySection.className='category-proof';
     categorySection.id='category';
@@ -1665,7 +1720,7 @@
     function launchLensOS(){lensOSTrack('workspace_opened',{source:'marketing_product'});$('site').style.display='none';$('auditApp').style.display='none';openWorkspace();window.scrollTo({top:0,behavior:'instant'});setTimeout(()=>$('v3Input')?.focus(),80)}
     $('heroStart').onclick=launchLensOS;$('siteStart').onclick=launchLensOS;$('foundingLaunch').onclick=launchLensOS;$('siteStart').textContent='Open LensOS →';
     let heroRunTimers=[],heroHasRun=false;
-    function runHeroWorkflow(event){event?.preventDefault?.();heroRunTimers.forEach(clearTimeout);heroRunTimers=[];const stages=[...$('heroDemoStatus').children],live=$('heroProductLive');stages.forEach(stage=>stage.classList.remove('active','done'));stages[0].classList.add('active');live.textContent='READING BRIEF';stages.forEach((stage,index)=>{heroRunTimers.push(setTimeout(()=>{stages.forEach((item,itemIndex)=>{item.classList.toggle('done',itemIndex<index);item.classList.toggle('active',itemIndex===index)});live.textContent=['INDEXING LOCALLY','SURFACING CANDIDATES','RATINGS READY','CLIENT LINK PREPARED'][index]},index*720))});heroRunTimers.push(setTimeout(()=>{stages.forEach(stage=>{stage.classList.remove('active');stage.classList.add('done')});live.textContent='REVIEW BEFORE SEND'},stages.length*720+180))}
+    function runHeroWorkflow(event){event?.preventDefault?.();const demo=$('heroDemoStatus');if(!demo){const box=$('heroProduct');if(box){['import','review','raw','adobe','tonight'].forEach((s,i)=>setTimeout(()=>{box.dataset.step=s;const live=$('heroProductLive');if(live)live.textContent=s;box.querySelectorAll('.hero-step').forEach(b=>b.classList.toggle('is-active',b.dataset.step===s))},i*700))}return}heroRunTimers.forEach(clearTimeout);heroRunTimers=[];const stages=[...demo.children],live=$('heroProductLive');stages.forEach(stage=>stage.classList.remove('active','done'));stages[0].classList.add('active');live.textContent='READING BRIEF';stages.forEach((stage,index)=>{heroRunTimers.push(setTimeout(()=>{stages.forEach((item,itemIndex)=>{item.classList.toggle('done',itemIndex<index);item.classList.toggle('active',itemIndex===index)});live.textContent=['INDEXING LOCALLY','SURFACING CANDIDATES','RATINGS READY','CLIENT LINK PREPARED'][index]},index*720))});heroRunTimers.push(setTimeout(()=>{stages.forEach(stage=>{stage.classList.remove('active');stage.classList.add('done')});live.textContent='REVIEW BEFORE SEND'},stages.length*720+180))}
     $('heroCommand').addEventListener('submit',runHeroWorkflow);
     const heroObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting&&!heroHasRun){heroHasRun=true;setTimeout(runHeroWorkflow,450)}}),{threshold:.42});heroObserver.observe(document.querySelector('.hero-product'));
     const proofSteps=[...$('proofFlow').children];let proofTimers=[];
