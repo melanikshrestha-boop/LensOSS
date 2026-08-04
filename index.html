@@ -897,11 +897,11 @@
     /* Adobe-style marquee: one short outcome line, rotates. No body essay. */
     siteHero.querySelector('.site-kicker').textContent='LENSOS / CAMERA TO CLIENT';
     const heroTaglines=[
-      'Your turnaround<br><i>date is tonight.</i>',
-      'Export by<br><i>tonight.</i>',
-      'Shoot more.<br><i>Edit more.</i>'
+      'Create at the<br><i>highest level.</i>',
+      'Your Turnaround<br><i>Date is TONIGHT.</i>'
     ];
     const heroH1=siteHero.querySelector('h1');
+    heroH1.setAttribute('aria-label','Create at the highest level. Your Turnaround Date is TONIGHT.');
     heroH1.innerHTML=`<span class="tagline-rotate" id="heroTagline"><span class="tagline-line tagline-fade">${heroTaglines[0]}</span></span>`;
     let heroTaglineIndex=0;
     setInterval(()=>{
