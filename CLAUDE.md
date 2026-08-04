@@ -8,7 +8,13 @@
 Identity law (host-agnostic): `~/Grok.md` (= `~/Claude.md`).
 
 ## Product
-**LensOS** — camera-to-client OS for photographers outside the software bubble.
+**LensOS** — the boring path between camera and client so pros spend time on the only craft that matters.
+
+**Pitch (literal — do not dress it up):**
+- Photographer craft = **shooting + editing**. That is all “creating” means.
+- We do **not** own craft. Adobe owns edit. Camera owns shoot.
+- We own two choke points only: **volume decision speed (Pick)** + **client delivery (Send)**, routed **around Adobe**.
+- Say that. Do not invent “prompt-first OS,” “orchestrate creativity,” or other soft pitch filler.
 
 **Spine (non-negotiable):**
 ```

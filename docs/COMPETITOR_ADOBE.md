@@ -115,12 +115,16 @@ Adobe can afford catalog sprawl. **We cannot.** Lazy visitor = one scroll, one b
 ## Product positioning (CTO lock)
 
 ```
-Adobe owns: pixels, develop, cloud library, industry-standard files, (now) OK-enough in-hub cull
-LensOS owns: volume decision speed + client delivery path around Adobe
+Craft (all of it):     shoot + edit. Nothing else is "creating."
+Adobe owns:            edit / pixels / develop / industry files
+Camera owns:           shoot
+LensOS owns:           Pick (volume decision speed) + Send (client path) around Adobe
 ```
 
-Never compete on color science or Firefly models.  
-Compete on **same-night card → selects → client**.
+That’s the whole pitch. Don’t pad it.
+
+Never compete on color science or Firefly.  
+Win = **same-night card → selects → client link** so shoot + edit get the hours back.
 
 **Spine stays non-negotiable:**
 ```
