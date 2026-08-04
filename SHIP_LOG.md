@@ -30,3 +30,13 @@ Newest first.
 **Next:** harden Pick (perf 1k+, HEIC path); waitlist wiring; decide deprecate `~/Projects/lens` remote after dual-push period.
 
 ---
+
+## 2026-08-04 — Restore full multi-surface prototype
+**Target:** CEO said one-pager over-deleted; bring all pages back. "Too much" meant some copy, not the whole product maze.  
+**Shipped:**
+- Restored `index.full-prototype.html` → live `index.html` (all surfaces: marketing, survey, workspace, Event Desk, culling, studio, etc.)
+- Archive copy kept as `index.full-prototype.html`
+**Done when:** `:8000` has full prototype again.  
+**Law:** Trim writing / dead sections later — never wipe multi-surface product demos without explicit order.
+
+---
