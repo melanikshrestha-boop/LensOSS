@@ -58,6 +58,12 @@ npm run site
 4. **Never wipe** shoots, galleries, IDB, or user data without explicit order.
 5. New commits over history rewrites.
 
+## Design gate (CEO)
+- Tagline locked: **Your turnaround date is tonight.**
+- Spine locked: Import → Pick → Adobe → Send.
+- **Before a major UI redesign** (workspace empty, nav, hero, shell): **prompt CEO with options.** Do not free-solo another layout.
+- Empty state must feel like a **working photo OS**, not a chatbot landing with helper essays.
+
 ## CTO bar
 - Correctness first. Empty import, one photo, huge folder, offline, double-click.
 - Run `npm run build` (in `app/`) before done. Fix failures.
