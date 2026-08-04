@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LensOS | your turnaround date is tonight</title>
+  <title>LensOS | your turnaround day is tonight</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
@@ -547,6 +547,62 @@
     .in-view #pricing .price-grid article:nth-child(4){transition-delay:.36s}
     @media(max-width:980px){#pricing .price-grid{grid-template-columns:1fr!important}#pricing .price-grid article{min-height:auto}}
   </style>
+  <style id="pricing-descript-structure">
+    #pricing{position:relative;padding-top:118px;padding-bottom:132px;background:radial-gradient(circle at 48% 34%,rgba(139,133,255,.12),transparent 31%),#0b0b0c}
+    #pricing .pricing-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;max-width:1600px;margin:0 auto}
+    #pricing .pricing-head>div:first-child{max-width:760px}
+    #pricing .pricing-head h2{max-width:720px;margin-bottom:8px}
+    #pricing .pricing-intro{max-width:630px;margin:0;color:#85858c;font-size:14px;line-height:1.55}
+    #pricing .pricing-controls{display:grid;justify-items:end;gap:9px;padding-bottom:8px}
+    #pricing .billing-switch{display:flex;padding:4px;border-radius:999px;background:rgba(255,255,255,.065)}
+    #pricing .billing-switch button{border:0;border-radius:999px;background:transparent;color:#85858e;padding:10px 15px;font:600 10px "DM Mono";cursor:pointer;transition:background .2s,color .2s,transform .2s}
+    #pricing .billing-switch button[aria-pressed="true"]{background:#f4f3ef;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    #pricing .billing-switch button:hover{color:#fff}
+    #pricing .billing-switch button[aria-pressed="true"]:hover{color:#111}
+    #pricing .billing-save{font:9px "DM Mono";color:#79e79a;letter-spacing:.05em}
+    #pricing .price-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px;max-width:1600px;margin:50px auto 0;padding:10px;border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));box-shadow:0 34px 110px rgba(0,0,0,.28);backdrop-filter:blur(28px)}
+    #pricing .price-grid article{min-height:590px!important;padding:28px 24px;border:0!important;border-radius:26px;background:transparent!important;box-shadow:none!important;display:flex;flex-direction:column;overflow:visible;color:#f4f3ef}
+    #pricing .price-grid article:before{display:none!important}
+    #pricing .price-grid article:hover{transform:none!important;box-shadow:none!important}
+    #pricing .price-grid article.featured{background:radial-gradient(circle at 50% 0,rgba(168,163,255,.24),transparent 42%),rgba(128,124,255,.10)!important;box-shadow:0 26px 80px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.07)!important}
+    #pricing .price-grid article.enterprise{background:radial-gradient(circle at 80% 0,rgba(153,127,255,.17),transparent 42%)!important}
+    #pricing .plan-top{display:flex;justify-content:space-between;align-items:center}
+    #pricing .plan-top span,#pricing .plan-top em{font:500 9px "DM Mono";letter-spacing:.05em;color:#8f90a1;font-style:normal}
+    #pricing .featured .plan-top span,#pricing .featured .plan-top em{color:#bfc2ff}
+    #pricing .price-grid h3{margin:34px 0 0;color:#f4f3ef;font:500 38px/1 "Instrument Serif";letter-spacing:-.045em}
+    #pricing .plan-description{min-height:0!important;margin:10px 0 0;color:#85858d!important;font-size:12px!important;line-height:1.45}
+    #pricing .featured .plan-description{color:#a9a9b4!important}
+    #pricing .plan-price{display:flex;align-items:baseline;gap:6px;margin:30px 0 0}
+    #pricing .plan-price strong{color:#f4f3ef;font:650 42px/1 "DM Sans";letter-spacing:-.065em}
+    #pricing .plan-price small{color:#777780!important;font:500 9px "DM Mono"}
+    #pricing .plan-billing{min-height:26px;margin-top:8px;color:#686873!important;font:500 8px "DM Mono";letter-spacing:.035em}
+    #pricing .plan-allowance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 22px}
+    #pricing .plan-allowance div{padding:0;background:transparent!important}
+    #pricing .plan-allowance b{display:block;color:#efeff1;font:650 16px/1 "DM Sans";letter-spacing:-.035em}
+    #pricing .plan-allowance span{display:block;margin-top:6px;color:#686873!important;font:500 7px/1.35 "DM Mono"}
+    #pricing .price-grid ul{margin:0 0 28px!important;padding:0!important;border:0!important;list-style:none}
+    #pricing .price-grid li{margin:12px 0;padding:0;color:#a7a7ae!important;font-size:11px;line-height:1.35}
+    #pricing .price-grid li:before{display:none!important}
+    #pricing .price-grid li:first-child{color:#ededf0!important}
+    #pricing .price-grid .site-start,#pricing .enterprise-contact{margin-top:auto;width:max-content;min-width:0;padding:12px 16px;border:0;border-radius:999px;background:rgba(255,255,255,.09);color:#eaeaed;box-shadow:none;font:600 10px "DM Mono";cursor:pointer}
+    #pricing .price-grid article.featured .site-start{background:#a8acff;color:#101116}
+    #pricing .price-grid .site-start:hover,#pricing .enterprise-contact:hover{background:#f4f3ef;color:#111}
+    #pricing .pricing-foot{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;max-width:1600px;margin:22px auto 0}
+    #pricing .pricing-rules{display:flex;flex-wrap:wrap;gap:20px;color:#73737d;font:500 9px/1.5 "DM Mono"}
+    #pricing .pricing-rules b{color:#aaaab4;font-weight:600}
+    #pricing .pricing-compare,#pricing .pricing-extras{margin:0}
+    #pricing .pricing-compare summary,#pricing .pricing-extras summary{width:max-content;list-style:none;cursor:pointer;color:#aeb1ff;font:600 10px "DM Mono";padding:8px 0}
+    #pricing .pricing-compare summary::-webkit-details-marker,#pricing .pricing-extras summary::-webkit-details-marker{display:none}
+    #pricing .compare-grid{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:4px;max-width:1600px;margin-top:18px;padding:12px;border-radius:24px;background:rgba(255,255,255,.035)}
+    #pricing .compare-grid span{min-height:42px;display:flex;align-items:center;padding:9px 12px;border-radius:9px;background:transparent!important;color:#8f8f99;font:500 9px/1.35 "DM Mono"}
+    #pricing .compare-grid span:nth-child(-n+5){color:#f1f0ed;font-weight:700;background:rgba(255,255,255,.045)!important}
+    #pricing .compare-grid .yes{color:#7ce799}
+    #pricing .extra-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    #pricing .extra-grid span{padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.045);color:#898993;font:500 9px "DM Mono"}
+    #pricing .extra-grid b{color:#ededf0;font-weight:600}
+    @media(max-width:1200px){#pricing .price-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#pricing .price-grid article{min-height:540px!important}}
+    @media(max-width:780px){#pricing{padding-left:24px;padding-right:24px}#pricing .pricing-head{align-items:flex-start;flex-direction:column}#pricing .pricing-controls{justify-items:start}#pricing .price-grid{grid-template-columns:1fr!important;padding:7px}#pricing .price-grid article{min-height:auto!important}#pricing .pricing-foot{align-items:flex-start;flex-direction:column;gap:10px}#pricing .compare-grid{grid-template-columns:1fr 1fr}#pricing .compare-grid span:nth-child(-n+5){background:transparent!important}#pricing .compare-grid span:first-child{grid-column:1/-1}}
+  </style>
   <style id="photographer-flow-v2">
     .vertical-os{padding:104px 5vw 118px;background:#070708}
     .vertical-os-wrap{max-width:1480px;display:block}
@@ -788,11 +844,289 @@
     @media(prefers-reduced-motion:reduce){.shoot-grade{transition:none}.shoot-grade:after{animation:none}}
     @media(max-width:1000px){.site-hero{grid-template-columns:1fr;min-height:auto}.site-hero .site-kicker,.site-hero h1,.site-hero>p,.site-hero .site-actions{grid-column:1}.hero-product{grid-column:1;grid-row:auto;height:560px;margin-top:28px;transform:none}.hero-steps{grid-template-columns:repeat(3,1fr)}.hero-angle-grid{grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(6,1fr)}.category-map{min-height:820px}.category-node.n1,.category-node.n3{left:0}.category-node.n2,.category-node.n4{right:0}.proof-console,.economics-grid,.founding-shell{grid-template-columns:1fr}.trust-strip{grid-template-columns:1fr 1fr}.founding-copy{min-height:480px}}
     @media(max-width:680px){.site-hero{padding:88px 20px 60px}.site-hero h1{font-size:58px}.site-hero .site-actions span{display:none}.hero-product{height:560px;border-radius:25px}.hero-command{bottom:130px;left:14px;right:14px}.hero-demo-status{left:14px;right:14px;bottom:18px;grid-template-columns:1fr 1fr}.hero-product-top{left:18px;right:18px}.category-proof,.proof-lab,.economics,.founding-studios{padding:90px 22px}.category-map{min-height:auto;display:grid;grid-template-columns:1fr;gap:10px;margin-top:48px}.category-orbit{position:relative;width:250px;grid-row:1;margin:10px auto 28px}.category-core{position:absolute;top:125px}.category-node,.category-node.n1,.category-node.n2,.category-node.n3,.category-node.n4{position:relative;inset:auto;width:100%}.proof-lab-head{display:block}.proof-lab-head p{margin-top:18px}.proof-command,.proof-result{min-height:460px;padding:20px}.economics-output{grid-template-columns:1fr}.economics-metric.primary{grid-column:auto}.trust-strip{grid-template-columns:1fr;padding:60px 22px}.founding-copy,.founding-score{padding:25px;border-radius:23px}.founding-copy{min-height:430px}.founding-metric{grid-template-columns:1fr}.founding-metric em{grid-column:1;grid-row:auto;justify-self:start}.shoot-import{grid-template-columns:80px 1fr;width:90%}.shoot-import-target{grid-column:1/-1}.shoot-burst{grid-template-columns:repeat(3,1fr);height:250px}.shoot-burst i:nth-child(n+4){display:none}.shoot-captions{left:18px;top:80px}.shoot-caption{width:230px}.shoot-hero-frame{inset:12% 6%}.v3-ops-page{width:calc(100% - 30px);padding-top:42px}.v3-ops-head{display:block}.v3-ops-head p{margin-top:18px}.v3-ops-grid{grid-template-columns:1fr}.v3-ops-action{display:block}.v3-ops-action button{width:100%;margin-top:18px}}
-    @media(prefers-reduced-motion:reduce){.hero-product-photo,.category-orbit{animation:none}.hero-product,.category-node{transition:none}}
+    @media(prefers-reduced-motion:reduce){.hero-product-photo,.category-orbit,.hero-promise{animation:none!important}.hero-product,.category-node{transition:none}.hero-promise:first-child{opacity:1}.hero-promise:last-child{opacity:0}}
+  </style>
+  <style id="motion-film-v3">
+    .vertical-os{padding:96px 5vw 118px;background:#070708}
+    .vertical-os-wrap{max-width:1480px;margin:0 auto;display:block}
+    .vertical-os-copy{max-width:760px;margin:0 auto 46px;text-align:center}
+    .vertical-os-copy h2{max-width:none;margin:16px 0 12px}
+    .vertical-os-copy p{margin:0 auto;color:#7f7f88;font-size:14px}
+    .vertical-collapse{margin-top:22px;border:0;border-radius:999px;padding:12px 17px;background:#f1f0ed;color:#101013;font:650 10px "DM Mono";cursor:pointer}
+    .shoot-flow{--film-duration:10s;position:relative;max-width:1320px;aspect-ratio:16/9;margin:0 auto;border:0;border-radius:30px;overflow:hidden;isolation:isolate;background:#050608;box-shadow:0 38px 120px rgba(0,0,0,.58)}
+    .shoot-flow:before,.shoot-flow:after{display:none!important}
+    .shoot-world{position:absolute;inset:0;overflow:hidden;transform:none!important}
+    .film-arena{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,8,.4),rgba(4,5,8,.82)),url('assets/lensos-court-v1.png') center/cover;opacity:.32;animation:filmArena var(--film-duration) linear both}
+    .film-import{position:absolute;inset:0;animation:filmImportStage var(--film-duration) linear both}
+    .film-sd{position:absolute;left:7%;top:31%;width:126px;height:174px;border-radius:16px 16px 30px 30px;background:linear-gradient(145deg,#30333f,#15161d 72%);box-shadow:0 30px 80px rgba(0,0,0,.58);display:grid;place-content:center;text-align:center;transform:rotate(-8deg);animation:filmSdSnap .46s cubic-bezier(.16,1,.3,1) both}
+    .film-sd:before{content:"";position:absolute;left:26px;right:26px;top:19px;height:13px;border-radius:3px;background:#08090b;box-shadow:0 25px 0 #08090b,0 50px 0 #08090b}
+    .film-sd b{margin-top:47px;color:#f5f5f3;font:750 29px "DM Sans"}.film-sd span{margin-top:4px;color:#8d8e9a;font:600 8px "DM Mono"}
+    .film-laptop{position:absolute;right:8%;top:28%;width:250px;height:164px;border-radius:17px 17px 8px 8px;padding:18px;background:#12141a;box-shadow:0 30px 90px rgba(0,0,0,.56),inset 0 0 0 2px #30333e;display:grid;align-content:center;justify-items:center;z-index:2}
+    .film-laptop:after{content:"";position:absolute;left:-22px;right:-22px;bottom:-14px;height:16px;border-radius:4px 4px 14px 14px;background:#2e313b;box-shadow:0 12px 30px rgba(0,0,0,.44)}
+    .film-laptop span{color:#9ca2ff;font:600 9px "DM Mono"}.film-laptop b{margin-top:8px;color:#f4f4f2;font:700 38px/.92 "DM Sans";letter-spacing:-.055em}.film-laptop em{margin-top:8px;color:#7bea97;font:normal 9px "DM Mono"}
+    .film-flight{position:absolute;inset:0;z-index:3;pointer-events:none}
+    .film-flight i{position:absolute;left:17%;top:var(--sy);width:58px;aspect-ratio:4/3;border-radius:5px;background-image:url('assets/lensos-court-burst-16x9-v4.png');background-size:400% 300%;background-position:var(--px) var(--py);box-shadow:0 9px 24px rgba(0,0,0,.48);opacity:0;transform:translate3d(-16px,0,0) rotate(var(--rot)) scale(.72);animation:filmFrameFlight 1.08s cubic-bezier(.2,.72,.18,1) both;animation-delay:calc(.14s + var(--i)*.025s)}
+    .film-review{position:absolute;left:7%;right:7%;top:18%;bottom:14%;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10px;animation:filmReviewStage var(--film-duration) linear both}
+    .film-review i{position:relative;min-width:0;border-radius:12px;background-image:url('assets/lensos-court-burst-16x9-v4.png');background-size:400% 300%;background-position:var(--px) var(--py);box-shadow:0 17px 42px rgba(0,0,0,.5);overflow:hidden;animation:filmReviewFrame var(--film-duration) linear both}
+    .film-review i:after{content:"RAW";position:absolute;left:8px;top:8px;border-radius:999px;padding:5px 7px;background:rgba(5,6,9,.72);color:#d7d7dc;font:650 7px "DM Mono";backdrop-filter:blur(8px)}
+    .film-review i.chosen{z-index:2;animation:filmChosenFrame var(--film-duration) cubic-bezier(.16,1,.3,1) both}
+    .film-review i.chosen:after{content:"KEEP";background:#b8bcff;color:#11131a}
+    .film-keeper{position:absolute;inset:0;overflow:hidden;background:url('assets/lensos-court-v1.png') center/cover;opacity:0;transform-origin:48% 78%;animation:filmKeeperLock var(--film-duration) cubic-bezier(.16,1,.3,1) both;will-change:transform,opacity}
+    .film-keeper:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.04) 55%,rgba(0,0,0,.38));z-index:1}
+    .film-grade{position:absolute;inset:0;background:url('assets/lensos-court-v1.png') center/cover;filter:saturate(1.22) contrast(1.11) brightness(1.05);clip-path:inset(0 0 0 100%);animation:filmGradeSweep var(--film-duration) cubic-bezier(.16,1,.3,1) both;z-index:2;will-change:clip-path}
+    .film-final-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,8,.14),rgba(4,5,8,.12) 42%,rgba(4,5,8,.7));opacity:0;animation:filmFinalShade var(--film-duration) linear both;z-index:3}
+    .film-raw-lock{position:absolute;left:50%;top:50%;z-index:5;transform:translate(-50%,-50%);border-radius:999px;padding:9px 12px;background:rgba(7,8,11,.78);color:#eef0f1;font:650 9px "DM Mono";backdrop-filter:blur(14px);animation:filmRawLabel var(--film-duration) linear both}
+    .film-edit-ready{position:absolute;right:26px;top:25px;z-index:5;color:#edf0ee;font:650 9px "DM Mono";animation:filmEditLabel var(--film-duration) linear both}.film-edit-ready:before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:#7bea97;box-shadow:0 0 18px rgba(123,234,151,.8)}
+    .film-tagline{position:absolute;inset:0;z-index:6;display:grid;place-items:center;padding:9% 7%;text-align:center;color:#fff;opacity:0;filter:blur(12px);transform:translateY(74px);animation:filmTagline var(--film-duration) cubic-bezier(.16,1,.3,1) both;will-change:transform,opacity,filter}
+    .film-tagline strong{display:block;max-width:100%;color:#fff;font:700 clamp(38px,5.5vw,84px)/.9 "DM Sans";letter-spacing:-.075em;text-wrap:balance;text-shadow:0 22px 65px rgba(0,0,0,.55)}
+    .film-stage-note{position:absolute;left:32px;bottom:48px;z-index:9;color:#fff;font:650 9px "DM Mono";letter-spacing:.04em}
+    .film-stage-note span{position:absolute;left:0;bottom:0;width:max-content;opacity:0;transform:translateY(8px)}
+    .film-stage-note .note-import{animation:filmNoteImport var(--film-duration) linear both}.film-stage-note .note-review{animation:filmNoteReview var(--film-duration) linear both}.film-stage-note .note-lock{animation:filmNoteLock var(--film-duration) linear both}
+    .shoot-top{left:28px;right:28px;top:25px;z-index:12}.shoot-brand{font-size:16px}.shoot-live{background:rgba(6,7,10,.58);backdrop-filter:blur(14px)}
+    .shoot-filmbar{left:28px;right:28px;bottom:20px;z-index:12}.shoot-flow .shoot-filmbar i{height:3px;background:rgba(255,255,255,.16)}.shoot-flow .shoot-filmbar i:after{background:#999fff;animation:filmMotionProgress var(--film-duration) linear both;transform:scaleX(0);transition:none}
+    .shoot-flow.is-paused .film-arena,.shoot-flow.is-paused .film-import,.shoot-flow.is-paused .film-sd,.shoot-flow.is-paused .film-flight i,.shoot-flow.is-paused .film-review,.shoot-flow.is-paused .film-review i,.shoot-flow.is-paused .film-keeper,.shoot-flow.is-paused .film-grade,.shoot-flow.is-paused .film-final-shade,.shoot-flow.is-paused .film-raw-lock,.shoot-flow.is-paused .film-edit-ready,.shoot-flow.is-paused .film-tagline,.shoot-flow.is-paused .film-stage-note span,.shoot-flow.is-paused .shoot-filmbar i:after{animation-play-state:paused!important}
+    @keyframes filmArena{0%,40%{opacity:.34}48%,100%{opacity:0}}
+    @keyframes filmImportStage{0%,20%{opacity:1;filter:blur(0)}27%,100%{opacity:0;filter:blur(9px);pointer-events:none}}
+    @keyframes filmSdSnap{0%{opacity:0;transform:translateX(-70px) rotate(-18deg) scale(.76)}100%{opacity:1;transform:translateX(0) rotate(-8deg) scale(1)}}
+    @keyframes filmFrameFlight{0%{opacity:0;left:17%;top:var(--sy);transform:translate3d(-16px,0,0) rotate(var(--rot)) scale(.72)}18%{opacity:.94}58%{opacity:1;top:calc(var(--sy) - 7%);transform:translate3d(0,0,0) rotate(0deg) scale(1.03)}100%{opacity:0;left:78%;top:47%;transform:translate3d(0,0,0) rotate(0deg) scale(.08)}}
+    @keyframes filmReviewStage{0%,20%{opacity:0;transform:translateY(28px) scale(.96);filter:blur(8px)}27%,39%{opacity:1;transform:none;filter:blur(0)}48%,100%{opacity:0;transform:scale(1.035);filter:blur(8px)}}
+    @keyframes filmReviewFrame{0%,31%{opacity:1;filter:none;transform:none}39%,100%{opacity:.13;filter:saturate(.5) brightness(.62);transform:scale(.94)}}
+    @keyframes filmChosenFrame{0%,30%{opacity:1;filter:none;transform:none;box-shadow:0 17px 42px rgba(0,0,0,.5)}35%,43%{opacity:1;filter:none;transform:translateY(-8px) scale(1.035);box-shadow:0 0 0 3px #999fff,0 25px 70px rgba(0,0,0,.65)}47%,100%{opacity:0;transform:translateY(-8px) scale(1.08)}}
+    @keyframes filmKeeperLock{0%,40%{opacity:0;transform:translate(-3%,28%) scale(.17);border-radius:32px}43%{opacity:1}52%,100%{opacity:1;transform:none;border-radius:0}}
+    @keyframes filmGradeSweep{0%,53%{clip-path:inset(0 0 0 100%)}70%,100%{clip-path:inset(0)}}
+    @keyframes filmFinalShade{0%,72%{opacity:0}80%,100%{opacity:1}}
+    @keyframes filmRawLabel{0%,45%{opacity:0;transform:translate(-50%,-32%) scale(.88)}50%,57%{opacity:1;transform:translate(-50%,-50%) scale(1)}62%,100%{opacity:0;transform:translate(-50%,-62%) scale(.96)}}
+    @keyframes filmEditLabel{0%,54%{opacity:0;transform:translateX(16px)}60%,70%{opacity:1;transform:none}75%,100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes filmTagline{0%,73%{opacity:0;filter:blur(12px);transform:translateY(74px)}82%{opacity:1;filter:blur(0);transform:translateY(-6px)}86%,100%{opacity:1;filter:blur(0);transform:translateY(0)}}
+    @keyframes filmNoteImport{0%,2%{opacity:0;transform:translateY(8px)}5%,20%{opacity:1;transform:none}24%,100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes filmNoteReview{0%,23%{opacity:0;transform:translateY(8px)}27%,39%{opacity:1;transform:none}44%,100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes filmNoteLock{0%,43%{opacity:0;transform:translateY(8px)}48%,66%{opacity:1;transform:none}71%,100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes filmMotionProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @media(max-width:780px){.vertical-os{padding-left:20px;padding-right:20px}.shoot-flow{aspect-ratio:4/5;border-radius:23px}.film-sd{left:6%;top:29%;width:82px;height:120px}.film-sd:before{left:19px;right:19px;top:14px;height:8px;box-shadow:0 17px 0 #08090b,0 34px 0 #08090b}.film-sd b{margin-top:36px;font-size:20px}.film-laptop{right:5%;top:31%;width:132px;height:100px;padding:10px}.film-laptop b{font-size:25px}.film-flight i{width:38px}.film-review{left:5%;right:5%;top:18%;bottom:14%;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:7px}.film-review i{border-radius:8px}.film-tagline{inset:0;padding:18% 6%}.film-tagline strong{font-size:clamp(30px,10vw,48px)}.shoot-top{left:17px;right:17px}.shoot-filmbar{left:17px;right:17px}.film-stage-note{left:18px;bottom:47px}}
+    @media(prefers-reduced-motion:reduce){.film-arena,.film-import,.film-sd,.film-flight i,.film-review,.film-review i,.film-keeper,.film-grade,.film-final-shade,.film-raw-lock,.film-edit-ready,.film-tagline,.film-stage-note span,.shoot-filmbar i:after{animation-duration:.01ms!important;animation-delay:0!important}}
+  </style>
+  <style id="hero-lens-return">
+    .site-hero{display:block;min-height:640px;padding:96px 8vw 82px;background:#09090b}
+    .site-hero:before{display:block!important;background:radial-gradient(circle at 79% 48%,rgba(103,112,255,.14),transparent 20%)!important;pointer-events:none}
+    .site-hero:after{display:block!important;width:520px!important;height:520px!important;right:4.5vw!important;top:50%!important;transform:translateY(-50%);border-color:rgba(255,255,255,.085)!important;box-shadow:0 0 0 48px rgba(255,255,255,.023),0 0 0 96px rgba(255,255,255,.013)!important}
+    .site-hero .site-kicker,.site-hero h1,.site-hero>p,.site-hero .site-actions{display:block;grid-column:auto;max-width:720px;position:relative;z-index:2}
+    .site-hero .site-kicker{margin:0 0 18px;color:#9ba1ff}
+    .site-hero h1{margin:0 0 22px;font-size:clamp(58px,6.25vw,98px)}
+    .site-hero>p{max-width:545px;margin:0;color:#9e9ea7;font-size:17px}
+    .site-hero .site-actions{margin-top:28px}
+    .site-hero .hero-proof{display:block!important;right:6.5vw!important;bottom:58px!important;width:300px!important;border:0!important;border-radius:16px;background:rgba(25,26,29,.76)!important;backdrop-filter:blur(18px);padding:18px!important;box-shadow:0 20px 70px rgba(0,0,0,.22)}
+    .hero-product{display:none!important}
+    @media(max-width:1100px){.site-hero:after{width:390px!important;height:390px!important;right:1vw!important;box-shadow:0 0 0 36px rgba(255,255,255,.021),0 0 0 72px rgba(255,255,255,.012)!important}.site-hero .hero-proof{right:4vw!important;width:270px!important}}
+    @media(max-width:800px){.site-hero{min-height:610px;padding:86px 24px 70px}.site-hero:after{width:270px!important;height:270px!important;right:-92px!important;top:48%!important;box-shadow:0 0 0 25px rgba(255,255,255,.02),0 0 0 50px rgba(255,255,255,.011)!important}.site-hero .hero-proof{display:none!important}.site-hero h1{font-size:56px}.site-hero>p{font-size:15px}}
+  </style>
+  <style id="clean-spacing-pass">
+    :root{--site-gutter:clamp(24px,7vw,120px);--section-space:clamp(84px,7.5vw,112px)}
+    .site-nav{border-bottom:0;box-shadow:none!important;padding-inline:var(--site-gutter)}
+    .site main>.category-proof,.site main>#how,.site main>.trust-strip,.site main>#photographers{display:none!important}
+    .vertical-os{padding:var(--section-space) var(--site-gutter) clamp(100px,8vw,126px)}
+    .vertical-os.reveal{opacity:1;transform:none}
+    .vertical-os-wrap{max-width:1320px}
+    .vertical-os-copy{max-width:680px;margin-bottom:clamp(48px,5vw,70px)}
+    .vertical-os-copy h2{margin:18px 0 18px;font-size:clamp(52px,5vw,74px);line-height:.92;letter-spacing:-.055em}
+    .vertical-os-copy p{max-width:520px;font-size:13px;line-height:1.65}
+    .vertical-collapse{margin-top:26px}
+    .shoot-flow{max-width:1240px}
+    .film-tagline{padding:9% 11%;filter:none;transform:translate3d(0,54px,0) scale(.985);animation:filmTagline var(--film-duration) cubic-bezier(.22,1,.36,1) both;will-change:transform,opacity}
+    .film-tagline strong{display:grid;gap:clamp(14px,1.35vw,22px);width:min(920px,100%);max-width:920px;font:660 clamp(34px,3.8vw,60px)/.98 "DM Sans";letter-spacing:-.015em;word-spacing:.11em;text-wrap:balance}
+    .film-tagline strong span{display:block}
+    @keyframes filmEditLabel{0%,54%{opacity:0;transform:translateX(16px)}60%,67%{opacity:1;transform:none}72%,100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes filmTagline{0%,75%{opacity:0;transform:translate3d(0,54px,0) scale(.985)}82%{opacity:1;transform:translate3d(0,-3px,0) scale(1)}86%,100%{opacity:1;transform:translate3d(0,0,0) scale(1)}}
+    .proof-lab,.economics,.founding-studios{padding:var(--section-space) var(--site-gutter)}
+    .proof-lab-head h2{max-width:760px;font-size:clamp(50px,4.5vw,66px);line-height:.94;letter-spacing:-.055em}
+    .proof-lab-head>p,.economics-head>p,.footer-brand>p{display:none}
+    .proof-console{min-height:480px}
+    .economics-head h2{max-width:760px;font-size:clamp(50px,4.5vw,66px);line-height:.94;letter-spacing:-.055em}
+    #pricing{padding:var(--section-space) var(--site-gutter) clamp(96px,8vw,124px)}
+    #pricing .pricing-head h2{max-width:680px;font-size:clamp(50px,4.5vw,66px);line-height:.96;letter-spacing:-.055em}
+    #pricing .price-grid{max-width:1450px;margin-top:42px}
+    #pricing .price-grid article{min-height:540px!important}
+    .founding-shell{grid-template-columns:1fr;max-width:960px;margin-inline:auto}
+    .founding-score{display:none}
+    .founding-copy{min-height:410px;padding:clamp(34px,5vw,64px)}
+    .founding-copy h2{max-width:680px;margin:24px 0 0;font-size:clamp(58px,7vw,92px);line-height:.89;letter-spacing:-.06em}
+    .founding-copy>p{display:none}
+    .site-footer{border-top:0;padding:clamp(70px,6vw,92px) var(--site-gutter) 30px}
+    .footer-brand h2{font-size:clamp(42px,3.8vw,56px);line-height:.94;letter-spacing:-.055em}
+    @media(max-width:900px){
+      .shoot-flow{min-height:480px;aspect-ratio:16/9}
+      .proof-console{min-height:0}
+      #pricing .price-grid article{min-height:auto!important}
+    }
+    @media(max-width:780px){
+      :root{--site-gutter:20px;--section-space:76px}
+      .vertical-os-copy{margin-bottom:34px}
+      .vertical-os-copy h2{font-size:clamp(44px,12vw,58px)}
+      .shoot-flow{min-height:500px;aspect-ratio:4/5;border-radius:22px}
+      .film-tagline{padding:96px 22px 106px}
+      .film-tagline strong{gap:12px;font-size:clamp(27px,8vw,38px);line-height:1;letter-spacing:-.015em;word-spacing:.08em}
+      .film-stage-note{left:18px;right:18px;bottom:48px}
+      .film-stage-note span{width:auto;max-width:100%;white-space:normal;font-size:8px;line-height:1.4}
+      .proof-lab-head,.economics-head,.pricing-head{display:block}
+      .proof-lab-head h2,.economics-head h2,#pricing .pricing-head h2{font-size:clamp(44px,12vw,58px)}
+      .proof-lab-head p{margin-top:18px}
+      .founding-copy h2{font-size:clamp(46px,12vw,60px)}
+    }
+    @media(max-width:520px){
+      .site-footer{padding:60px 20px 26px}
+      .footer-grid{grid-template-columns:1fr;row-gap:34px}
+      .footer-brand{grid-column:auto}
+      .footer-bottom{margin-top:44px;gap:10px}
+    }
+  </style>
+  <style id="cursor-orchestration-v1">
+    .site-hero{
+      min-height:398px!important;
+      padding:52px var(--site-gutter) 48px!important;
+      display:block!important;
+      position:relative!important;
+      overflow:hidden!important;
+      background:#09090b!important;
+    }
+    .site-hero:before{
+      background:radial-gradient(circle at 88% 92%,rgba(112,119,255,.13),transparent 22%)!important;
+    }
+    .site-hero:after{
+      display:block!important;
+      width:300px!important;
+      height:300px!important;
+      right:-150px!important;
+      bottom:-150px!important;
+      top:auto!important;
+      transform:none!important;
+      border-color:rgba(255,255,255,.07)!important;
+      box-shadow:0 0 0 30px rgba(255,255,255,.022),0 0 0 60px rgba(255,255,255,.012)!important;
+    }
+    .site-hero .site-kicker{margin:0 0 26px!important;color:#a2a6ff!important}
+    .site-hero h1{
+      width:min(1160px,88vw)!important;
+      max-width:none!important;
+      min-height:1.9em!important;
+      margin:0!important;
+      display:grid!important;
+      align-items:center!important;
+      overflow:hidden!important;
+      font:750 clamp(42px,5vw,72px)/.98 "DM Sans",sans-serif!important;
+      letter-spacing:.025em!important;
+      word-spacing:.16em!important;
+      text-transform:uppercase!important;
+    }
+    .site-hero h1 .tagline-rotate{
+      display:grid!important;
+      align-items:center!important;
+      overflow:hidden!important;
+    }
+    .site-hero h1 .tagline-line{
+      grid-area:1/1;
+      width:min(1160px,100%);
+      max-width:none!important;
+      font:inherit!important;
+      font-family:"DM Sans",sans-serif!important;
+      line-height:inherit!important;
+      letter-spacing:inherit!important;
+      word-spacing:inherit!important;
+      text-transform:uppercase!important;
+      will-change:clip-path,opacity,transform;
+    }
+    .site-hero h1 .tagline-line i{
+      font:inherit!important;
+      font-family:"DM Sans",sans-serif!important;
+      font-style:normal!important;
+      color:#a2a6ff!important;
+      letter-spacing:inherit!important;
+      word-spacing:inherit!important;
+      text-transform:uppercase!important;
+    }
+    .site-hero h1 .tagline-fade{animation:heroLineWipe .82s cubic-bezier(.16,1,.3,1) both!important}
+    @keyframes heroLineWipe{
+      from{opacity:.18;clip-path:inset(0 100% 0 0);transform:translateX(-16px)}
+      to{opacity:1;clip-path:inset(0);transform:none}
+    }
+    .site-hero>p,.site-hero .site-actions span,.site-hero .hero-proof,.site-hero .hero-product,.quote,.system-story{display:none!important}
+    .site-hero .site-actions{margin-top:30px!important}
+    .site-hero .site-actions .site-start{padding:15px 20px}
+
+    .vertical-os{padding:clamp(82px,8vw,120px) var(--site-gutter)!important;background:#08090b;color:#f6f5f2}
+    .vertical-os-wrap{max-width:1440px!important;margin:0 auto}
+    .cursor-flow-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}
+    .cursor-flow-head h2{margin:10px 0 0;font:740 clamp(46px,5vw,72px)/.91 "DM Sans";letter-spacing:-.06em;text-transform:uppercase}
+    .cursor-flow-head p{margin:0 0 5px;color:#ff87cf;font:500 12px "DM Mono";letter-spacing:.04em}
+    .cursor-flow{position:relative}
+    .cursor-flow-stage{
+      position:relative;
+      min-height:620px;
+      aspect-ratio:16/8.2;
+      overflow:hidden;
+      border-radius:30px;
+      background:#0e0f13;
+      box-shadow:0 46px 130px rgba(0,0,0,.38);
+      isolation:isolate;
+    }
+    .cursor-flow-stage:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 72% 42%,rgba(107,113,255,.17),transparent 25%),linear-gradient(135deg,#0f1015,#08090b 68%);
+      z-index:-2;
+    }
+    .cursor-scene{position:absolute;inset:0;opacity:0;visibility:hidden;transform:scale(.996);transition:opacity .18s ease,transform .28s cubic-bezier(.22,1,.36,1),visibility 0s linear .18s;pointer-events:none;will-change:opacity,transform}
+    .cursor-flow[data-step="sd"] .cursor-scene[data-scene="sd"],
+    .cursor-flow[data-step="export"] .cursor-scene[data-scene="export"],
+    .cursor-flow[data-step="cull"] .cursor-scene[data-scene="cull"],
+    .cursor-flow[data-step="raw"] .cursor-scene[data-scene="raw"],
+    .cursor-flow[data-step="adobe"] .cursor-scene[data-scene="adobe"],
+    .cursor-flow[data-step="delivery"] .cursor-scene[data-scene="delivery"]{opacity:1;visibility:visible;transform:scale(1);transition-delay:0s}
+    .cursor-photo{position:absolute;inset:0;background:url('assets/lensos-court-v1.png') center 44%/cover no-repeat}
+    .cursor-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,4,7,.08),rgba(3,4,7,.14) 48%,rgba(3,4,7,.8))}
+    .cursor-mark{position:absolute;left:34px;top:30px;z-index:4;font:760 20px "DM Sans";letter-spacing:-.04em}.cursor-mark b{color:#949aff}
+    .cursor-status{position:absolute;right:30px;top:28px;z-index:4;padding:10px 13px;border-radius:999px;background:rgba(8,9,12,.72);backdrop-filter:blur(16px);font:600 10px "DM Mono";letter-spacing:.04em;color:#e7e6eb}
+    .cursor-status:before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:#7bea97;box-shadow:0 0 18px rgba(123,234,151,.72)}
+    .cursor-sd-card{position:absolute;left:10%;top:19%;width:190px;height:274px;border-radius:18px 18px 28px 28px;background:linear-gradient(145deg,#2c2e37,#111218);box-shadow:16px 22px 0 rgba(120,125,255,.13),0 35px 95px rgba(0,0,0,.58);transform:rotate(-7deg);padding:42px 24px;color:#f4f3f7}
+    .cursor-sd-card:before{content:"";position:absolute;left:38px;right:38px;top:22px;height:10px;border-radius:3px;background:#090a0d;box-shadow:0 21px 0 #090a0d,0 42px 0 #090a0d}
+    .cursor-sd-card strong{display:block;margin-top:82px;font:740 50px "DM Sans"}.cursor-sd-card span{font:600 10px "DM Mono";color:#8f909a}
+    .cursor-contact-strip{position:absolute;left:34%;right:7%;top:19%;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;transform:translateX(-20px);transition:transform .34s cubic-bezier(.22,1,.36,1);will-change:transform}
+    .cursor-flow[data-step="sd"] .cursor-contact-strip{transform:translateX(0)}
+    .cursor-contact-strip i,.cursor-contact-grid i{display:block;aspect-ratio:4/3;border-radius:10px;background-image:url('assets/lensos-court-burst-16x9-v4.png');background-size:400% 300%;background-position:var(--x) var(--y);box-shadow:0 14px 34px rgba(0,0,0,.44)}
+    .cursor-device{position:absolute;right:8%;top:25%;width:38%;aspect-ratio:16/10;border-radius:20px;background:#15161c;padding:14px;box-shadow:0 35px 100px rgba(0,0,0,.52)}
+    .cursor-device-screen{height:100%;border-radius:13px;background:#090a0d;display:grid;place-items:center;color:#9298ff;font:600 12px "DM Mono";text-align:center;line-height:1.8}
+    .cursor-export-stack{position:absolute;left:7%;top:21%;width:52%;height:55%}
+    .cursor-export-stack i{position:absolute;width:118px;aspect-ratio:4/3;border-radius:9px;background-image:url('assets/lensos-court-burst-16x9-v4.png');background-size:400% 300%;background-position:var(--x) var(--y);box-shadow:0 18px 52px rgba(0,0,0,.55);transform:translate(var(--sx),var(--sy)) rotate(var(--r));transition:transform .38s cubic-bezier(.22,1,.36,1);will-change:transform}
+    .cursor-flow[data-step="export"] .cursor-export-stack i{transform:translate(var(--ex),var(--ey)) rotate(0deg) scale(.55)}
+    .cursor-contact-grid{position:absolute;inset:12% 8% 17%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:12px}
+    .cursor-contact-grid i{position:relative;min-width:0;overflow:hidden;transition:opacity .4s ease,filter .4s ease,transform .5s cubic-bezier(.22,1,.36,1),box-shadow .4s ease}
+    .cursor-contact-grid i:not(.is-keeper){opacity:.22;filter:saturate(.45) brightness(.66);transform:scale(.96)}
+    .cursor-contact-grid i.is-keeper{box-shadow:0 0 0 3px #999fff,0 20px 54px rgba(0,0,0,.56);transform:translateY(-5px)}
+    .cursor-contact-grid i.is-keeper:after{content:"KEEP";position:absolute;left:10px;top:10px;padding:6px 8px;border-radius:999px;background:#aaaaff;color:#09090c;font:700 8px "DM Mono"}
+    .cursor-raw-label,.cursor-adobe-label,.cursor-delivery-label{position:absolute;left:50%;top:50%;z-index:3;transform:translate(-50%,-50%);font:750 clamp(52px,7vw,104px)/.9 "DM Sans";letter-spacing:-.06em;color:#fff;text-transform:uppercase;text-align:center}
+    .cursor-raw-label small,.cursor-adobe-label small,.cursor-delivery-label small{display:block;margin-top:16px;font:600 10px "DM Mono";letter-spacing:.08em;color:#aaaab4}
+    .cursor-adobe-grade{position:absolute;inset:0;background:url('assets/lensos-court-v1.png') center 44%/cover no-repeat;filter:saturate(1.28) contrast(1.13) brightness(1.04);clip-path:inset(0 100% 0 0);transition:clip-path .42s cubic-bezier(.22,1,.36,1);will-change:clip-path}
+    .cursor-flow[data-step="adobe"] .cursor-adobe-grade{clip-path:inset(0)}
+    .cursor-adobe-sweep{position:absolute;top:0;bottom:0;left:0;width:3px;background:#a1a6ff;box-shadow:0 0 30px rgba(161,166,255,.8);transition:left .42s cubic-bezier(.22,1,.36,1);will-change:left}
+    .cursor-flow[data-step="adobe"] .cursor-adobe-sweep{left:100%}
+    .cursor-delivery-scene .cursor-photo{filter:saturate(1.18) contrast(1.08)}
+    .cursor-delivery-scene .cursor-photo:after{background:linear-gradient(180deg,rgba(3,4,7,.18),rgba(3,4,7,.36))}
+    .cursor-delivery-label{width:100%}.cursor-delivery-label strong{color:#85f09f}
+    .cursor-flow-tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:12px}
+    .cursor-step{position:relative;min-height:92px;border:0;border-radius:17px;background:#111217;color:#81828c;padding:18px 17px;text-align:left;cursor:pointer;transition:background .24s ease,color .24s ease,transform .32s cubic-bezier(.22,1,.36,1)}
+    .cursor-step:hover,.cursor-step:focus-visible,.cursor-step[aria-selected="true"]{background:#24253a;color:#f5f4f8;transform:translateY(-3px)}
+    .cursor-step:focus-visible{outline:2px solid #a1a6ff;outline-offset:3px}
+    .cursor-step span{display:block;margin-bottom:12px;font:600 9px "DM Mono";color:#969bff}
+    .cursor-step b{font:690 16px "DM Sans";letter-spacing:-.025em}
+    .cursor-hint{margin:18px 2px 0;color:#777985;font:500 10px "DM Mono";letter-spacing:.03em}
+    @media(max-width:900px){
+      .site-hero{min-height:370px!important;padding:48px 24px!important}.site-hero h1{width:100%!important;font-size:clamp(38px,8.4vw,56px)!important;min-height:2.3em!important}.site-hero:after{width:190px!important;height:190px!important;right:-95px!important;bottom:-95px!important;box-shadow:0 0 0 19px rgba(255,255,255,.02),0 0 0 38px rgba(255,255,255,.011)!important}
+      .cursor-flow-head{display:block}.cursor-flow-stage{min-height:400px;aspect-ratio:16/10;border-radius:24px}.cursor-flow-tabs{grid-template-columns:repeat(3,1fr)}.cursor-sd-card{left:7%;top:18%;width:130px;height:190px;padding:22px 16px}.cursor-sd-card:before{left:26px;right:26px;top:16px;height:7px;box-shadow:0 15px 0 #090a0d,0 30px 0 #090a0d}.cursor-sd-card strong{margin-top:64px;font-size:34px}.cursor-contact-strip{left:43%;right:5%;top:17%;grid-template-columns:repeat(2,1fr);gap:8px}.cursor-contact-strip i:nth-child(n+7){display:none}.cursor-device{right:6%;top:30%;width:51%}.cursor-export-stack{left:2%;top:19%;width:70%}.cursor-flow[data-step="export"] .cursor-export-stack i{transform:translate(var(--mex),var(--mey)) rotate(0) scale(.38)}.cursor-contact-grid{inset:12% 5% 15%;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:7px}.cursor-raw-label,.cursor-adobe-label,.cursor-delivery-label{font-size:clamp(44px,12vw,72px)}
+    }
+    @media(max-width:560px){.cursor-flow-stage{min-height:340px;aspect-ratio:4/3}.cursor-flow-tabs{grid-template-columns:repeat(3,1fr)}.cursor-step{min-height:76px;padding:13px 11px}.cursor-step span{margin-bottom:7px}.cursor-step b{font-size:13px}.cursor-hint{text-align:center}}
+    @media(prefers-reduced-motion:reduce){.site-hero h1 .tagline-fade{animation:none!important}.cursor-scene,.cursor-export-stack i,.cursor-contact-grid i,.cursor-adobe-grade,.cursor-adobe-sweep{transition:none!important}}
   </style>
 </head>
 <body>
-  <section class="site" id="site"><nav class="site-nav"><div class="brand"><span class="lens"></span>LensOS</div><div class="site-links"><a href="#how">How it works</a><a href="#vertical-os">The OS</a><a href="#pricing">Pricing</a><a href="#photographers">Photo + video</a></div><button class="site-login" id="siteLogin">Log in</button><button class="site-start" id="siteStart">Take the survey →</button></nav><main><section class="site-hero"><div class="site-kicker">LENSOS / CAMERA TO CLIENT</div><h1>Your turnaround<br><i>date is tonight.</i></h1><p></p><div class="site-actions"><button class="site-start" id="heroStart">Run one shoot free →</button><span>Local first · Originals untouched</span></div><div class="hero-proof"><b></b><span></span></div></section><section class="site-section" id="how"><div class="site-kicker">ONE SENTENCE. A CLEAR NEXT MOVE.</div><h2>Your turnaround <i>date is tonight.</i></h2><div class="feature-grid"><article><b>01</b><h3>Start with your shoot.</h3><p>Describe what happened in plain language. No special commands, menus, or technical vocabulary.</p></article><article><b>02</b><h3>See the plan.</h3><p>LensOS organizes the client handoff, selection, gallery, and delivery into a clear, editable flow.</p></article><article><b>03</b><h3>Deliver today.</h3><p>Stop quoting a five-to-seven-day turnaround for work that can move the same day.</p></article></div></section><section class="quote"><p>“The turnaround should be <i>today</i>.”</p><span>Not a rush fee. The new baseline.</span></section><section class="vertical-os" id="vertical-os"><div class="vertical-os-wrap"><div class="vertical-os-copy"><div class="site-kicker">VERTICAL, NOT HORIZONTAL</div><h2>One brief.<br><i>The whole workflow.</i></h2><p>Set the outcome. LensOS carries the work from card to client: and pauses only for the creative decisions that need you.</p><div class="vertical-promise"><span>AUTONOMY FOR THE BUSY WORK</span><span>YOU APPROVE THE ART</span></div><button class="vertical-collapse" id="verticalCollapse" type="button">Collapse the subscription stack →</button></div><div class="os-visual" id="osVisual"><section class="noise-stack"><small>HORIZONTAL TOOL STACK</small><div class="tool-scatter"><div class="tool-chip">TAB 01<b>Culling</b></div><div class="tool-chip">TAB 02<b>Gallery</b></div><div class="tool-chip">TAB 03<b>CRM</b></div><div class="tool-chip">TAB 04<b>Storage</b></div><div class="tool-chip">TAB 05<b>Books</b></div><div class="tool-chip">TAB 06<b>AI helper</b></div></div><div class="noise-count"><strong>6 tools</strong><span>6 logins · 6 bills · every handoff is yours</span></div></section><div class="os-shift"><span>→</span><small>ONE BRIEF</small></div><section class="vertical-core"><div class="core-head"><b>LensOS</b><span>AUTONOMY ON</span></div><div class="core-prompt">“Take this shoot from card to client tonight.”</div><div class="core-stack"><div class="core-step"><b>01</b><span>Ingest</span><em>cards + drives</em></div><div class="core-step"><b>02</b><span>Cull / select</span><em>photo + video</em></div><div class="core-step"><b>03</b><span>Edit handoff</span><em>Adobe</em></div><div class="core-step"><b>04</b><span>Deliver</span><em>gallery + cut</em></div><div class="core-step"><b>05</b><span>Clients</span><em>feedback + approvals</em></div><div class="core-step"><b>06</b><span>Business</span><em>time + profit</em></div></div><div class="core-result"><strong>1 operating system</strong><span>one memory · one client record · one business</span></div></section></div></div></section><section class="site-section pricing" id="pricing"><div><div class="site-kicker">SIMPLE, ON PURPOSE</div><h2>Start free.<br>Grow when the work does.</h2><p>Try LensOS before you commit. No card required.</p></div><div class="price-grid"><article><span>FREE</span><h3>$0 <small>/ month</small></h3><p>For trying LensOS on real shoots.</p><ul><li>Workflow audit</li><li>1 active project</li><li>Pick + send on real shoots</li><li>Same-day workflow plans</li></ul><button class="site-start pricing-start">Take the survey →</button></article><article class="featured"><span>STUDIO</span><h3>$29 <small>/ month</small></h3><p>For photographers and videographers who want the whole workflow moving.</p><ul><li>Unlimited active projects</li><li>Gallery + delivery helpers</li><li>Client selection tracking</li><li>Priority same-day workflows</li></ul><button class="site-start pricing-start">Join the waitlist →</button></article></div></section><section class="site-section final" id="photographers"><div class="site-kicker">FOR PHOTOGRAPHERS</div><h2>Your turnaround<br><i>date is tonight.</i></h2><button class="site-start final-start">Start the survey →</button></section></main><footer class="site-footer"><div class="footer-grid"><section class="footer-brand"><div class="brand"><span class="lens"></span>LensOS</div><h2>Your turnaround<br><i>date is tonight.</i></h2><p>Pick + send around Adobe. Craft stays yours.</p><button class="site-start footer-start final-start">Start free →</button></section><nav class="footer-col" aria-label="Company"><b>Company</b><a href="#how">About</a><a href="#photographers">Careers</a><a href="#photographers">Press &amp; media</a><a href="#photographers">Partnerships</a><a href="#photographers">Security</a><a href="#photographers">Trust center</a></nav><nav class="footer-col" aria-label="Product"><b>Product</b><a href="#how">Photography</a><a href="#how">Videography</a><a href="#vertical-os">The operating system</a><a href="#how">Client delivery</a><a href="#how">Studio metrics</a><a href="#pricing">Pricing</a></nav><nav class="footer-col" aria-label="Resources"><b>Resources</b><a href="#how">Learn</a><a href="#how">Workflow templates</a><a href="#how">Adobe workflow</a><a href="#how">Guides</a><a href="#how">Changelog</a><a href="#how">Support</a></nav></div><div class="footer-bottom"><span>© 2026 LensOS</span><span>Your turnaround date is tonight</span></div></footer></section>
+  <section class="site" id="site"><nav class="site-nav"><div class="brand"><span class="lens"></span>LensOS</div><div class="site-links"><a href="#how">How it works</a><a href="#vertical-os">The OS</a><a href="#pricing">Pricing</a><a href="#photographers">Photo + video</a></div><button class="site-login" id="siteLogin">Log in</button><button class="site-start" id="siteStart">Take the survey →</button></nav><main><section class="site-hero"><div class="site-kicker">LENSOS / CAMERA TO CLIENT</div><h1>CREATE AT THE HIGHEST LEVEL</h1><p></p><div class="site-actions"><button class="site-start" id="heroStart">Run one shoot free →</button><span>Local first · Originals untouched</span></div></section><section class="site-section" id="how"><div class="site-kicker">ONE SENTENCE. A CLEAR NEXT MOVE.</div><h2>Your turnaround <i>day is tonight.</i></h2><div class="feature-grid"><article><b>01</b><h3>Start with your shoot.</h3><p>Describe what happened in plain language. No special commands, menus, or technical vocabulary.</p></article><article><b>02</b><h3>See the plan.</h3><p>LensOS organizes the client handoff, selection, gallery, and delivery into a clear, editable flow.</p></article><article><b>03</b><h3>Deliver today.</h3><p>Stop quoting a five-to-seven-day turnaround for work that can move the same day.</p></article></div></section><section class="quote"><p>“The turnaround should be <i>today</i>.”</p><span>Not a rush fee. The new baseline.</span></section><section class="vertical-os" id="vertical-os"><div class="vertical-os-wrap"><div class="vertical-os-copy"><div class="site-kicker">VERTICAL, NOT HORIZONTAL</div><h2>One brief.<br><i>The whole workflow.</i></h2><p>Set the outcome. LensOS carries the work from card to client: and pauses only for the creative decisions that need you.</p><div class="vertical-promise"><span>AUTONOMY FOR THE BUSY WORK</span><span>YOU APPROVE THE ART</span></div><button class="vertical-collapse" id="verticalCollapse" type="button">Collapse the subscription stack →</button></div><div class="os-visual" id="osVisual"><section class="noise-stack"><small>HORIZONTAL TOOL STACK</small><div class="tool-scatter"><div class="tool-chip">TAB 01<b>Culling</b></div><div class="tool-chip">TAB 02<b>Gallery</b></div><div class="tool-chip">TAB 03<b>CRM</b></div><div class="tool-chip">TAB 04<b>Storage</b></div><div class="tool-chip">TAB 05<b>Books</b></div><div class="tool-chip">TAB 06<b>AI helper</b></div></div><div class="noise-count"><strong>6 tools</strong><span>6 logins · 6 bills · every handoff is yours</span></div></section><div class="os-shift"><span>→</span><small>ONE BRIEF</small></div><section class="vertical-core"><div class="core-head"><b>LensOS</b><span>AUTONOMY ON</span></div><div class="core-prompt">“Take this shoot from card to client tonight.”</div><div class="core-stack"><div class="core-step"><b>01</b><span>Ingest</span><em>cards + drives</em></div><div class="core-step"><b>02</b><span>Cull / select</span><em>photo + video</em></div><div class="core-step"><b>03</b><span>Edit handoff</span><em>Adobe</em></div><div class="core-step"><b>04</b><span>Deliver</span><em>gallery + cut</em></div><div class="core-step"><b>05</b><span>Clients</span><em>feedback + approvals</em></div><div class="core-step"><b>06</b><span>Business</span><em>time + profit</em></div></div><div class="core-result"><strong>1 operating system</strong><span>one memory · one client record · one business</span></div></section></div></div></section><section class="site-section pricing" id="pricing"><div><div class="site-kicker">SIMPLE, ON PURPOSE</div><h2>Start free.<br>Grow when the work does.</h2><p>Try LensOS before you commit. No card required.</p></div><div class="price-grid"><article><span>FREE</span><h3>$0 <small>/ month</small></h3><p>For trying LensOS on real shoots.</p><ul><li>Workflow audit</li><li>1 active project</li><li>Pick + send on real shoots</li><li>Same-day workflow plans</li></ul><button class="site-start pricing-start">Take the survey →</button></article><article class="featured"><span>STUDIO</span><h3>$29 <small>/ month</small></h3><p>For photographers and videographers who want the whole workflow moving.</p><ul><li>Unlimited active projects</li><li>Gallery + delivery helpers</li><li>Client selection tracking</li><li>Priority same-day workflows</li></ul><button class="site-start pricing-start">Join the waitlist →</button></article></div></section><section class="site-section final" id="photographers"><div class="site-kicker">FOR PHOTOGRAPHERS</div><h2>Your turnaround<br><i>day is tonight.</i></h2><button class="site-start final-start">Start the survey →</button></section></main><footer class="site-footer"><div class="footer-grid"><section class="footer-brand"><div class="brand"><span class="lens"></span>LensOS</div><h2>Your turnaround<br><i>day is tonight.</i></h2><p>Pick + send around Adobe. Craft stays yours.</p><button class="site-start footer-start final-start">Start free →</button></section><nav class="footer-col" aria-label="Company"><b>Company</b><a href="#how">About</a><a href="#photographers">Careers</a><a href="#photographers">Press &amp; media</a><a href="#photographers">Partnerships</a><a href="#photographers">Security</a><a href="#photographers">Trust center</a></nav><nav class="footer-col" aria-label="Product"><b>Product</b><a href="#how">Photography</a><a href="#how">Videography</a><a href="#vertical-os">The operating system</a><a href="#how">Client delivery</a><a href="#how">Studio metrics</a><a href="#pricing">Pricing</a></nav><nav class="footer-col" aria-label="Resources"><b>Resources</b><a href="#how">Learn</a><a href="#how">Workflow templates</a><a href="#how">Adobe workflow</a><a href="#how">Guides</a><a href="#how">Changelog</a><a href="#how">Support</a></nav></div><div class="footer-bottom"><span>© 2026 LensOS</span><span>Your turnaround day is tonight</span></div></footer></section>
   <div id="auditApp"><header class="top"><div class="brand"><span class="lens"></span>LensOS</div><small>PRIVATE BETA / WORKFLOW BUILDER</small><div class="top-right"><small>YOUR STUDIO</small><span class="avatar">LO</span></div></header>
   <main class="page"><aside class="aside"><div class="aside-inner"><div class="eyebrow">THE LENSOS AUDIT</div><h1>Build the <em>studio</em> that lets you keep shooting.</h1><p>Tell us how your work actually moves today. LensOS works around your chosen tools and steps: only where you want help.</p></div><div class="outcome"><b>Your same-day workflow map</b><span>8 precise questions · 3 minutes</span></div></aside><div class="resizer" id="resizer" title="Drag to adjust"></div>
   <section class="main"><div id="form"><div class="progress-meta"><span class="step-label" id="counter">QUESTION 01 / 06</span><span class="source" id="topic">VOLUME</span><button class="skip-audit" id="skipAudit">Skip for now →</button></div><div class="progress"><i id="bar"></i></div><div class="question"><div class="step-label" id="kicker">START WITH THE REALITY</div><h2 id="title">How many RAW files do you typically come home with after a shoot?</h2><p class="hint" id="hint">This tells Lens OS where the first minute of relief should happen.</p><div class="choices" id="choices"></div><input class="custom" id="custom" placeholder="Tell us in your own words…"><div class="controls"><button class="back" id="back">← Back</button><button class="next" id="next">Continue →</button></div><div class="privacy">Built from working-photographer workflows, not generic productivity theory.</div></div></div>
@@ -850,40 +1184,62 @@
     appleSignup.id='appleSignup';
     appleSignup.innerHTML='<span class="apple-mark" aria-hidden="true">●</span> Continue with Apple';
     $('googleSignup').after(appleSignup);
-    $('pricing').innerHTML=`<div><div class="site-kicker">SIMPLE, ON PURPOSE</div><h2>Pick the setup<br>that fits your frame.</h2><p>Start with real shoots for free. Move up only when LensOS becomes part of your business.</p></div><div class="price-grid"><article><div class="plan-top"><span>01 / HOBBY</span><em>FREE FOREVER</em></div><h3>Hobby</h3><p class="plan-description">For learning the LensOS rhythm on your own photography.</p><div class="plan-price"><strong>$0</strong><small>/ month</small></div><div class="plan-billing">NO CARD REQUIRED</div><ul><li>1 active shoot</li><li>Local RAW previews</li><li>First-pass blur check</li><li>Simple client delivery</li></ul><button class="site-start pricing-start">Start Hobby →</button></article><article class="featured"><div class="plan-top"><span>02 / PRIME</span><em>MOST POPULAR</em></div><h3>Prime</h3><p class="plan-description">For working photographers delivering client work every week.</p><div class="plan-price"><strong>$29</strong><small>/ month</small></div><div class="plan-billing">BILLED MONTHLY</div><ul><li>Everything in Hobby</li><li>Unlimited active shoots</li><li>Full culling passes + burst groups</li><li>Client galleries and favorites</li><li>Lightroom handoff</li></ul><button class="site-start pricing-start">Go Prime →</button></article><article class="full-frame"><div class="plan-top"><span>03 / FULL FRAME</span><em>THE WHOLE STUDIO</em></div><h3>Full Frame</h3><p class="plan-description">For high-volume photographers and studios running on deadlines.</p><div class="plan-price"><strong>$79</strong><small>/ month</small></div><div class="plan-billing">BILLED MONTHLY</div><ul><li>Everything in Prime</li><li>Assistants and studio access</li><li>Same-day delivery packages</li><li>Client pipeline + acquisition</li><li>Profit, costs, and job analytics</li></ul><button class="site-start pricing-start">Go Full Frame →</button></article><article class="enterprise"><div class="plan-top"><span>04 / ENTERPRISE</span><em>CUSTOM</em></div><h3>Enterprise</h3><p class="plan-description">For agencies and production teams operating across clients, locations, and high-volume media.</p><div class="plan-price"><strong>Let's talk</strong></div><div class="plan-billing">VOLUME + SECURITY</div><ul><li>Everything in Full Frame</li><li>Custom workspaces and permissions</li><li>Dedicated onboarding</li><li>Security and retention controls</li><li>Volume pricing and priority support</li></ul><button class="enterprise-contact" type="button">Talk to LensOS →</button></article></div>`;
+    $('pricing').innerHTML=`<div class="pricing-head"><div><div class="site-kicker">SIMPLE, ON PURPOSE</div><h2>From first shoot.<br><i>To full studio.</i></h2></div><div class="pricing-controls"><div class="billing-switch" aria-label="Billing period"><button type="button" data-period="monthly" aria-pressed="true">Monthly</button><button type="button" data-period="annual" aria-pressed="false">Annual</button></div><span class="billing-save">SAVE UP TO 25% ANNUALLY</span></div></div><div class="price-grid"><article><div class="plan-top"><span>01 / HOBBY</span><em>FREE</em></div><h3>Hobby</h3><p class="plan-description">Try the full camera-to-client flow.</p><div class="plan-price"><strong>$0</strong><small>/ month</small></div><div class="plan-billing">NO CARD</div><div class="plan-allowance"><div><b>1,000</b><span>PHOTOS / MONTH</span></div><div><b>2 hours</b><span>VIDEO / MONTH</span></div></div><ul><li>1 active project</li><li>Local photo and video review</li><li>Client delivery link</li></ul><button class="site-start pricing-start">Start free →</button></article><article class="featured" data-monthly="29" data-annual="24"><div class="plan-top"><span>02 / PRIME</span><em>MOST POPULAR</em></div><h3>Prime</h3><p class="plan-description">For weekly client work.</p><div class="plan-price"><strong>$29</strong><small>/ month</small></div><div class="plan-billing">BILLED MONTHLY</div><div class="plan-allowance"><div><b>20,000</b><span>PHOTOS / MONTH</span></div><div><b>20 hours</b><span>VIDEO / MONTH</span></div></div><ul><li>Smart culling and first cuts</li><li>Adobe handoff</li><li>Galleries and approvals</li><li>100 GB cloud storage</li></ul><button class="site-start pricing-start">Choose Prime →</button></article><article class="full-frame" data-monthly="79" data-annual="59"><div class="plan-top"><span>03 / FULL FRAME</span><em>FOR TEAMS</em></div><h3>Full Frame</h3><p class="plan-description">For studios with volume.</p><div class="plan-price"><strong>$79</strong><small>/ month</small></div><div class="plan-billing">BILLED MONTHLY</div><div class="plan-allowance"><div><b>100,000</b><span>PHOTOS / MONTH</span></div><div><b>60 hours</b><span>VIDEO / MONTH</span></div></div><ul><li>Everything in Prime</li><li>5 studio seats</li><li>1 TB cloud storage</li><li>Clients, costs, and profit</li></ul><button class="site-start pricing-start">Choose Full Frame →</button></article><article class="enterprise"><div class="plan-top"><span>04 / ENTERPRISE</span><em>CUSTOM</em></div><h3>Enterprise</h3><p class="plan-description">For media teams at scale.</p><div class="plan-price"><strong>Custom</strong></div><div class="plan-billing">VOLUME PRICING</div><div class="plan-allowance"><div><b>Custom</b><span>MEDIA VOLUME</span></div><div><b>Custom</b><span>STORAGE</span></div></div><ul><li>Unlimited seats</li><li>SSO and team controls</li><li>Custom retention</li><li>Dedicated support</li></ul><button class="enterprise-contact" type="button">Talk to us →</button></article></div><details class="pricing-compare"><summary>Compare plans ↓</summary><div class="compare-grid"><span>Feature</span><span>Hobby</span><span>Prime</span><span>Full Frame</span><span>Enterprise</span><span>Adobe handoff</span><span>Preview</span><span class="yes">Included</span><span class="yes">Included</span><span class="yes">Custom</span><span>Client galleries</span><span>1 active</span><span class="yes">Unlimited</span><span class="yes">Unlimited</span><span class="yes">Unlimited</span><span>Team seats</span><span>1</span><span>1</span><span>5</span><span class="yes">Unlimited</span><span>Business dashboard</span><span>Preview</span><span>Core</span><span class="yes">Full</span><span class="yes">Custom</span></div></details>`;
+    $('pricing').innerHTML=`<div class="pricing-head"><div><div class="site-kicker">SIMPLE, ON PURPOSE</div><h2>Start free.<br><i>Grow with the work.</i></h2><p class="pricing-intro">Local review stays open. Assisted analysis, video, delivery storage, and team access scale with you.</p></div><div class="pricing-controls"><div class="billing-switch" aria-label="Billing period"><button type="button" data-period="monthly" aria-pressed="true">Monthly</button><button type="button" data-period="annual" aria-pressed="false">Annual</button></div><span class="billing-save">TWO MONTHS FREE ANNUALLY</span></div></div><div class="price-grid"><article><div class="plan-top"><span>01 / HOBBY</span><em>FREE</em></div><h3>Hobby</h3><p class="plan-description">Try one real shoot.</p><div class="plan-price"><strong>$0</strong><small>/ month</small></div><div class="plan-billing">NO CARD</div><div class="plan-allowance"><div><b>2,500</b><span>ASSISTED PHOTOS</span></div><div><b>30 min</b><span>SOURCE VIDEO</span></div><div><b>5 GB</b><span>DELIVERY</span></div></div><ul><li>1 active job</li><li>Visibility and duplicate checks</li><li>Basic video first pass</li><li>7-day client link</li></ul><button class="site-start pricing-start">Start free →</button></article><article class="featured" data-monthly="39" data-annual="33" data-annual-total="390"><div class="plan-top"><span>02 / PRIME</span><em>WORKING PRO</em></div><h3>Prime</h3><p class="plan-description">For weekly client work.</p><div class="plan-price"><strong>$39</strong><small>/ month</small></div><div class="plan-billing">BILLED MONTHLY</div><div class="plan-allowance"><div><b>30K</b><span>ASSISTED PHOTOS</span></div><div><b>5 hr</b><span>SOURCE VIDEO</span></div><div><b>250 GB</b><span>DELIVERY</span></div></div><ul><li>Unlimited local ingest and manual review</li><li>Adobe ratings and metadata handoff</li><li>Client galleries, approvals, and messaging</li><li>CRM, job ledger, and 90-day delivery</li></ul><button class="site-start pricing-start">Try Prime free →</button></article><article class="full-frame" data-monthly="99" data-annual="83" data-annual-total="990"><div class="plan-top"><span>03 / FULL FRAME</span><em>STUDIO</em></div><h3>Full Frame</h3><p class="plan-description">For studios moving volume.</p><div class="plan-price"><strong>$99</strong><small>/ month</small></div><div class="plan-billing">BILLED MONTHLY</div><div class="plan-allowance"><div><b>150K</b><span>ASSISTED PHOTOS</span></div><div><b>20 hr</b><span>SOURCE VIDEO</span></div><div><b>2 TB</b><span>DELIVERY</span></div></div><ul><li>Everything in Prime</li><li>3 studio seats and team approvals</li><li>Advanced video first pass</li><li>Custom domain, profit reports, priority support</li></ul><button class="site-start pricing-start">Choose Full Frame →</button></article><article class="enterprise"><div class="plan-top"><span>04 / ENTERPRISE</span><em>FROM $1,250</em></div><h3>Enterprise</h3><p class="plan-description">For media teams at scale.</p><div class="plan-price"><strong>Custom</strong></div><div class="plan-billing">CONTRACTED VOLUME</div><div class="plan-allowance"><div><b>Pooled</b><span>MEDIA USAGE</span></div><div><b>10</b><span>SEATS INCLUDED</span></div><div><b>BYO</b><span>STORAGE</span></div></div><ul><li>SSO, audit logs, and team controls</li><li>API and workflow automation</li><li>Custom retention and multiple brands</li><li>Dedicated onboarding and support SLA</li></ul><button class="enterprise-contact" type="button">Talk to us →</button></article></div><div class="pricing-foot"><div class="pricing-rules"><span><b>Photos</b> assisted checks only. Local manual review is unlimited on paid plans.</span><span><b>Video</b> counts source footage analyzed.</span><span><b>Storage</b> is active client delivery. Camera originals stay local.</span></div><details class="pricing-extras"><summary>Extra usage +</summary><div class="extra-grid"><span><b>25K photos</b> $15</span><span><b>5 video hours</b> $25</span><span><b>1 TB delivery</b> $29/mo</span><span><b>Studio seat</b> $20/mo</span><span><b>Clients</b> free</span></div></details></div><details class="pricing-compare"><summary>Compare plans +</summary><div class="compare-grid"><span>Service</span><span>Hobby</span><span>Prime</span><span>Full Frame</span><span>Enterprise</span><span>Active jobs</span><span>1</span><span class="yes">Unlimited</span><span class="yes">Unlimited</span><span class="yes">Custom</span><span>Local ingest and manual review</span><span>Included</span><span class="yes">Unlimited</span><span class="yes">Unlimited</span><span class="yes">Unlimited</span><span>Adobe handoff</span><span>Export list</span><span class="yes">Ratings + metadata</span><span class="yes">Ratings + metadata</span><span class="yes">Custom</span><span>Client galleries</span><span>LensOS brand</span><span class="yes">Custom brand</span><span class="yes">Custom domain</span><span class="yes">Multiple brands</span><span>Client records and job ledger</span><span>Preview</span><span class="yes">Included</span><span class="yes">Studio reporting</span><span class="yes">Custom</span><span>Working seats</span><span>1</span><span>1</span><span>3</span><span class="yes">10+</span><span>Support</span><span>Community</span><span>Email</span><span class="yes">Priority</span><span class="yes">SLA</span></div></details>`;
+    $('pricing').querySelector('.pricing-intro').textContent='Local review is free. Pay only when the work grows.';
     const pricingLead=$('pricing').firstElementChild;
-    pricingLead.querySelector('h2').innerHTML='From first shoot.<br><i>To full studio.</i>';
-    pricingLead.querySelector('p')?.remove();
     const priceCards=[...document.querySelectorAll('#pricing .price-grid article')];
-    if(priceCards[0]){priceCards[0].querySelector('.plan-description').textContent='For learning the LensOS rhythm on personal photo and video work.';priceCards[0].querySelectorAll('li')[1].textContent='Local camera-media previews';priceCards[0].querySelectorAll('li')[2].textContent='First-pass technical check';}
-    if(priceCards[1]){priceCards[1].querySelector('.plan-description').textContent='For working creators delivering client media every week.';priceCards[1].querySelectorAll('li')[2].textContent='Photo culling + video first cuts';priceCards[1].querySelectorAll('li')[4].textContent='Adobe + editor handoff';}
-    if(priceCards[2])priceCards[2].querySelector('.plan-description').textContent='For high-volume studios and media teams working on deadlines.';
-    $('vertical-os').querySelector('.vertical-os-wrap').innerHTML=`<div class="vertical-os-copy"><div class="site-kicker">CAMERA TO CLIENT</div><h2>Your turnaround<br><i>date is tonight.</i></h2></div><div class="shoot-flow" id="shootFlow" data-step="export"><div class="shoot-stage"><div class="shoot-still" aria-hidden="true"></div><div class="shoot-grade" aria-hidden="true"></div><div class="shoot-layer layer-import" aria-hidden="true"><div class="import-chip"><div class="sd">SD</div><div class="import-meta"><small>01 / IMPORT</small><b>4,128 RAW</b><em>Local · untouched</em></div></div></div><div class="shoot-layer layer-review" aria-hidden="true"><div class="film-strip"><i></i><i></i><i></i><i></i><i></i></div></div><div class="shoot-layer layer-edit" aria-hidden="true"><div class="adobe-bar"><span>RATINGS CARRIED</span><span>OPEN IN ADOBE ↗</span></div></div><div class="shoot-layer layer-export" aria-hidden="true"><div class="export-mark"><small>YOUR TURNAROUND DATE</small><strong>TONIGHT.</strong></div></div></div><div class="shoot-top"><div class="shoot-brand">Lens<b>OS</b></div><div class="shoot-live"><i></i><span>HOVER STEPS</span></div></div><div class="shoot-hud" id="shootHud"><small>04 / SEND</small><b>Your turnaround date is tonight</b><span>Not next week. Tonight.</span></div><div class="shoot-steps" role="tablist" aria-label="Workflow steps"><button type="button" class="shoot-step" data-step="import" role="tab"><small>01</small><b>Import</b></button><button type="button" class="shoot-step" data-step="review" role="tab"><small>02</small><b>Review</b></button><button type="button" class="shoot-step" data-step="edit" role="tab"><small>03</small><b>Adobe</b></button><button type="button" class="shoot-step is-active" data-step="export" role="tab"><small>04</small><b>Tonight</b></button></div></div>`;
-
-    /* Cursor on step boxes drives the film — image never moves */
-    (function wireShootSteps(){
-      const flow=$('shootFlow'); if(!flow) return;
-      const hud=$('shootHud');
-      const copy={
-        import:{k:'01 / IMPORT',t:'4,128 originals',s:'Card in. Local. Untouched.'},
-        review:{k:'02 / REVIEW',t:'312 candidates',s:'You make the final call.'},
-        edit:{k:'03 / ADOBE',t:'Edits wipe on',s:'Grade film · right to left. Photo locked.'},
-        export:{k:'04 / SEND',t:'Your turnaround date is tonight',s:'Not next week. Tonight.'}
-      };
-      function setStep(step){
-        flow.dataset.step=step;
-        flow.querySelectorAll('.shoot-step').forEach(btn=>btn.classList.toggle('is-active',btn.dataset.step===step));
-        const c=copy[step]||copy.export;
-        if(hud) hud.innerHTML=`<small>${c.k}</small><b>${c.t}</b><span>${c.s}</span>`;
-      }
-      flow.querySelectorAll('.shoot-step').forEach(btn=>{
-        btn.addEventListener('mouseenter',()=>setStep(btn.dataset.step));
-        btn.addEventListener('focus',()=>setStep(btn.dataset.step));
-        btn.addEventListener('click',()=>setStep(btn.dataset.step));
+    const billingButtons=[...document.querySelectorAll('#pricing .billing-switch button')];
+    function setBillingPeriod(period){
+      billingButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.period===period)));
+      priceCards.forEach(card=>{
+        if(!card.dataset.monthly)return;
+        const price=period==='annual'?card.dataset.annual:card.dataset.monthly;
+        card.querySelector('.plan-price strong').textContent=`$${price}`;
+        card.querySelector('.plan-billing').textContent=period==='annual'?`$${card.dataset.annualTotal} BILLED YEARLY`:'BILLED MONTHLY';
       });
-      setStep('export');
-    })();
-
+      lensOSTrack('pricing_period_changed',{period});
+    }
+    billingButtons.forEach(button=>button.addEventListener('click',()=>setBillingPeriod(button.dataset.period)));
+    const cursorFramePosition=index=>{const frame=index%12;return`--x:${((frame%4)*100/3).toFixed(3)}%;--y:${Math.floor(frame/4)*50}%`};
+    const cursorStripTiles=Array.from({length:8},(_,index)=>`<i style="${cursorFramePosition(index)}"></i>`).join('');
+    const cursorSheetTiles=Array.from({length:12},(_,index)=>`<i class="${index===6||index===9?'is-keeper':''}" style="${cursorFramePosition(index)}"></i>`).join('');
+    const cursorExportTiles=Array.from({length:12},(_,index)=>{const sx=(index%4)*92,sy=Math.floor(index/4)*82,rotation=-8+(index%5)*4;return`<i style="${cursorFramePosition(index)};--sx:${sx}px;--sy:${sy}px;--ex:${320+(index%3)*16}px;--ey:${54+(index%4)*9}px;--mex:${180+(index%3)*8}px;--mey:${62+(index%4)*6}px;--r:${rotation}deg"></i>`}).join('');
+    $('vertical-os').querySelector('.vertical-os-wrap').innerHTML=`
+      <header class="cursor-flow-head">
+        <div><div class="site-kicker">LENSOS / CAMERA TO CLIENT</div><h2>CAMERA TO CLIENT</h2></div>
+      </header>
+      <div class="cursor-flow" id="cursorFlow" data-step="sd">
+        <div class="cursor-flow-stage">
+          <section class="cursor-scene" id="cursor-panel-sd" role="tabpanel" data-scene="sd" aria-labelledby="cursor-tab-sd">
+            <div class="cursor-mark">Lens<b>OS</b></div><div class="cursor-status">SD CARD</div><div class="cursor-sd-card"><strong>SD</strong><span>CAMERA MEDIA</span></div><div class="cursor-contact-strip">${cursorStripTiles}</div>
+          </section>
+          <section class="cursor-scene" id="cursor-panel-export" role="tabpanel" data-scene="export" aria-labelledby="cursor-tab-export" aria-hidden="true">
+            <div class="cursor-mark">Lens<b>OS</b></div><div class="cursor-status">EXPORTING</div><div class="cursor-export-stack">${cursorExportTiles}</div><div class="cursor-device"><div class="cursor-device-screen">LENSOS</div></div>
+          </section>
+          <section class="cursor-scene" id="cursor-panel-cull" role="tabpanel" data-scene="cull" aria-labelledby="cursor-tab-cull" aria-hidden="true">
+            <div class="cursor-mark">Lens<b>OS</b></div><div class="cursor-status">CULLING</div><div class="cursor-contact-grid">${cursorSheetTiles}</div>
+          </section>
+          <section class="cursor-scene" id="cursor-panel-raw" role="tabpanel" data-scene="raw" aria-labelledby="cursor-tab-raw" aria-hidden="true">
+            <div class="cursor-photo"></div><div class="cursor-mark">Lens<b>OS</b></div><div class="cursor-status">RAW</div><div class="cursor-raw-label">RAW</div>
+          </section>
+          <section class="cursor-scene" id="cursor-panel-adobe" role="tabpanel" data-scene="adobe" aria-labelledby="cursor-tab-adobe" aria-hidden="true">
+            <div class="cursor-photo"></div><div class="cursor-adobe-grade"></div><div class="cursor-adobe-sweep"></div><div class="cursor-mark">Lens<b>OS</b></div><div class="cursor-status">ADOBE</div><div class="cursor-adobe-label">ADOBE</div>
+          </section>
+          <section class="cursor-scene cursor-delivery-scene" id="cursor-panel-delivery" role="tabpanel" data-scene="delivery" aria-labelledby="cursor-tab-delivery" aria-hidden="true">
+            <div class="cursor-photo"></div><div class="cursor-mark">Lens<b>OS</b></div><div class="cursor-status">DELIVERY</div><div class="cursor-delivery-label"><strong>DELIVERY</strong></div>
+          </section>
+        </div>
+        <div class="cursor-flow-tabs" role="tablist" aria-label="Camera to client workflow">
+          <button class="cursor-step" id="cursor-tab-sd" type="button" role="tab" data-step="sd" aria-controls="cursor-panel-sd" aria-selected="true"><span>01</span><b>SD card reading</b></button>
+          <button class="cursor-step" id="cursor-tab-export" type="button" role="tab" data-step="export" aria-controls="cursor-panel-export" aria-selected="false" tabindex="-1"><span>02</span><b>Exporting</b></button>
+          <button class="cursor-step" id="cursor-tab-cull" type="button" role="tab" data-step="cull" aria-controls="cursor-panel-cull" aria-selected="false" tabindex="-1"><span>03</span><b>LensOS culling</b></button>
+          <button class="cursor-step" id="cursor-tab-raw" type="button" role="tab" data-step="raw" aria-controls="cursor-panel-raw" aria-selected="false" tabindex="-1"><span>04</span><b>RAW</b></button>
+          <button class="cursor-step" id="cursor-tab-adobe" type="button" role="tab" data-step="adobe" aria-controls="cursor-panel-adobe" aria-selected="false" tabindex="-1"><span>05</span><b>Adobe</b></button>
+          <button class="cursor-step" id="cursor-tab-delivery" type="button" role="tab" data-step="delivery" aria-controls="cursor-panel-delivery" aria-selected="false" tabindex="-1"><span>06</span><b>Delivery</b></button>
+        </div>
+        <p class="cursor-hint">MOVE YOUR CURSOR</p>
+      </div>`;
     const contributorSection=document.createElement('section');
     contributorSection.className='site-section contributors';
     contributorSection.id='contributors';
@@ -899,11 +1255,11 @@
     /* Adobe-style marquee: one short outcome line, rotates. No body essay. */
     siteHero.querySelector('.site-kicker').textContent='LENSOS / CAMERA TO CLIENT';
     const heroTaglines=[
-      'Create at the<br><i>highest level.</i>',
-      'Your Turnaround<br><i>Date is TONIGHT.</i>'
+      'CREATE AT THE <i>HIGHEST LEVEL</i>',
+      'YOUR TURNAROUND DAY IS <i>TONIGHT</i>'
     ];
     const heroH1=siteHero.querySelector('h1');
-    heroH1.setAttribute('aria-label','Create at the highest level. Your Turnaround Date is TONIGHT.');
+    heroH1.setAttribute('aria-label','Create at the highest level. Your turnaround day is tonight.');
     heroH1.innerHTML=`<span class="tagline-rotate" id="heroTagline"><span class="tagline-line tagline-fade">${heroTaglines[0]}</span></span>`;
     let heroTaglineIndex=0;
     setInterval(()=>{
@@ -917,7 +1273,6 @@
     },4200);
     siteHero.querySelector('#heroStart').textContent='Run one shoot free →';
     siteHero.querySelector('.site-actions span').textContent='Local first · Originals untouched';
-    siteHero.insertAdjacentHTML('beforeend',`<section class="hero-product" id="heroProduct" data-step="import" aria-label="LensOS shoot workflow"><div class="hero-product-top"><b>Lens<i>OS</i></b><span id="heroProductLive">01 / IMPORT</span></div><div class="hero-stage"><div class="hero-layer layer-import"><div class="hero-angle-grid" aria-hidden="true"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:12% 20%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:26% 20%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:40% 20%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:54% 20%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:68% 20%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:82% 20%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:12% 38%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:26% 38%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:40% 38%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:54% 38%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:68% 38%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:82% 38%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:12% 56%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:26% 56%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:40% 56%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:54% 56%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:68% 56%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:82% 56%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:12% 74%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:26% 74%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:40% 74%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:54% 74%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:68% 74%"><img src="assets/lensos-court-v1.png" alt="" loading="lazy" style="object-position:82% 74%"></div><div class="import-badge"><span>BASKETBALL SHOOT</span><b>4,128 frames in</b></div></div><div class="hero-layer layer-review"><div class="review-strip"><article class="review-card skip"><img src="assets/lensos-court-v1.png" alt="" style="object-position:18% 40%"><span>SKIP</span></article><article class="review-card keep"><img src="assets/lensos-court-v1.png" alt="" style="object-position:48% 42%"><span>KEEP</span></article><article class="review-card skip"><img src="assets/lensos-court-v1.png" alt="" style="object-position:78% 48%"><span>SKIP</span></article></div></div><div class="hero-layer layer-raw"><div class="hero-film-base"></div><div class="raw-tag">RAW · UNEDITED</div></div><div class="hero-layer layer-adobe"><div class="hero-film-base"></div><div class="hero-film-grade"></div><div class="adobe-bar"><span>OPEN IN ADOBE ↗</span><em>Exported in 3 minutes</em></div></div><div class="hero-layer layer-tonight"><div class="tonight-copy"><small>05 / SEND</small><strong>Your turnaround<br><i>date is tonight.</i></strong></div></div></div><div class="hero-steps" role="tablist"><button type="button" class="hero-step is-active" data-step="import"><small>01</small><b>Import</b></button><button type="button" class="hero-step" data-step="review"><small>02</small><b>Review</b></button><button type="button" class="hero-step" data-step="raw"><small>03</small><b>Raw</b></button><button type="button" class="hero-step" data-step="adobe"><small>04</small><b>Adobe</b></button><button type="button" class="hero-step" data-step="tonight"><small>05</small><b>Tonight</b></button></div></section>`);
     (function wireHeroProduct(){
       const box=$('heroProduct'); if(!box) return;
       const live=$('heroProductLive');
@@ -948,15 +1303,10 @@
     categorySection.id='category';
     categorySection.innerHTML=`<div class="category-head"><div class="site-kicker">THE MISSING LAYER</div><h2>Creative tools edit files.<br><i>LensOS runs the job.</i></h2><p>One brief connects the media, deadline, client, delivery, and job record.</p></div><div class="category-map"><div class="category-orbit"></div><div class="category-core"><div><b>LensOS</b><span>JOB STATE</span></div></div><article class="category-node n1"><small>01 / CAMERA</small><b>Media enters once</b><span>RAW, bursts, clips, and metadata.</span></article><article class="category-node n2"><small>02 / DECISIONS</small><b>Your call stays yours</b><span>Candidates, approvals, and overrides.</span></article><article class="category-node n3"><small>03 / CLIENT</small><b>One delivery record</b><span>Proofs, notes, favorites, and finals.</span></article><article class="category-node n4"><small>04 / BUSINESS</small><b>Every job measured</b><span>Time, cost, margin, and delivery speed.</span></article></div>`;
     document.querySelector('#how').before(categorySection);
-    const proofLab=document.createElement('section');
-    proofLab.className='proof-lab';
-    proofLab.id='live-product';
-    proofLab.innerHTML=`<header class="proof-lab-head"><div><div class="site-kicker">ONE JOB, MOVING</div><h2>Watch the handoffs disappear.</h2></div><p>Illustrated workflow. Beta benchmarks publish next.</p></header><div class="proof-console"><section class="proof-command"><small>COMMAND LENSOS</small><h3 id="proofCommandTitle">“Take this game from card to client tonight.”</h3><p>Choose a brief or write your own.</p><div class="proof-presets"><button type="button" data-proof="Cull 4,128 basketball RAWs and surface 40 candidates">Basketball</button><button type="button" data-proof="Build a 60-second event recap and flag dead air">Event video</button><button type="button" data-proof="Create a proofing gallery with 25 favorites">Portrait gallery</button></div><form class="proof-prompt" id="proofPrompt"><input id="proofInput" value="Cull 4,128 basketball RAWs and surface 40 candidates" aria-label="LensOS product demo command"><button>RUN</button></form></section><section class="proof-result"><small>ILLUSTRATED WORKFLOW</small><div class="proof-project" id="proofProject">Arena game</div><div class="proof-meta" id="proofMeta">LOCAL · ORIGINALS SAFE · WAITING</div><div class="proof-flow" id="proofFlow"><div class="proof-step"><i>1</i><b>Read brief</b><span>READY</span></div><div class="proof-step"><i>2</i><b>Index media</b><span>4,128</span></div><div class="proof-step"><i>3</i><b>Surface candidates</b><span>40</span></div><div class="proof-step"><i>4</i><b>Carry ratings</b><span>ADOBE</span></div><div class="proof-step"><i>5</i><b>Prepare delivery</b><span>TONIGHT</span></div></div><div class="proof-outcome" id="proofOutcome"><strong>Waiting for command</strong><span>You approve every final frame.</span></div></section></div>`;
-    document.querySelector('#vertical-os').after(proofLab);
     const economicsSection=document.createElement('section');
     economicsSection.className='economics';
     economicsSection.id='economics';
-    economicsSection.innerHTML=`<div class="economics-head"><div class="site-kicker">CAPACITY SCENARIO</div><h2>Model your upside.</h2><p>Your inputs. An estimate, not a benchmark.</p></div><div class="economics-grid"><form class="economics-inputs" id="economicsInputs"><div class="economics-field"><label>SHOOTS EACH MONTH <output id="shootsOut">8</output></label><input id="shootsInput" type="range" min="1" max="40" value="8"></div><div class="economics-field"><label>HOURS AFTER EACH SHOOT <output id="hoursOut">6</output></label><input id="hoursInput" type="range" min="1" max="20" value="6"></div><div class="economics-field"><label>VALUE OF ONE HOUR <output id="rateOut">$75</output></label><input id="rateInput" type="range" min="20" max="300" step="5" value="75"></div><div class="economics-field"><label>TIME YOU EXPECT TO SAVE <output id="returnOut">70%</output></label><input id="returnInput" type="range" min="20" max="90" step="5" value="70"></div></form><div class="economics-output"><article class="economics-metric primary"><small>ANNUAL CAPACITY SCENARIO</small><strong id="annualValue">$30,240</strong></article><article class="economics-metric"><small>HOURS BACK / MONTH</small><strong id="hoursBack">34</strong></article><article class="economics-metric"><small>SHOOT DAYS BACK / YEAR</small><strong id="daysBack">50</strong></article></div></div>`;
+    economicsSection.innerHTML=`<div class="economics-head"><div class="site-kicker">TIME BACK</div><h2>Count the hours back.</h2></div><div class="economics-grid"><form class="economics-inputs" id="economicsInputs"><div class="economics-field"><label>SHOOTS EACH MONTH <output id="shootsOut">8</output></label><input id="shootsInput" type="range" min="1" max="40" value="8"></div><div class="economics-field"><label>HOURS AFTER EACH SHOOT <output id="hoursOut">6</output></label><input id="hoursInput" type="range" min="1" max="20" value="6"></div><div class="economics-field"><label>VALUE OF ONE HOUR <output id="rateOut">$75</output></label><input id="rateInput" type="range" min="20" max="300" step="5" value="75"></div><div class="economics-field"><label>TIME YOU EXPECT TO SAVE <output id="returnOut">70%</output></label><input id="returnInput" type="range" min="20" max="90" step="5" value="70"></div></form><div class="economics-output"><article class="economics-metric primary"><small>VALUE OF TIME BACK / YEAR</small><strong id="annualValue">$30,240</strong></article><article class="economics-metric"><small>HOURS BACK / MONTH</small><strong id="hoursBack">34</strong></article><article class="economics-metric"><small>SHOOT DAYS BACK / YEAR</small><strong id="daysBack">50</strong></article></div></div>`;
     document.querySelector('#pricing').before(economicsSection);
     const trustStrip=document.createElement('section');
     trustStrip.className='trust-strip';
@@ -969,24 +1319,25 @@
     document.querySelector('#photographers').before(foundingStudiosSection);
     siteHero.after($('vertical-os'));
     $('vertical-os').after(categorySection);
-    categorySection.after(proofLab);
-    proofLab.after($('how'));
+    categorySection.after($('how'));
     $('how').after(trustStrip);
     trustStrip.after(economicsSection);
     economicsSection.after($('pricing'));
     $('pricing').after(foundingStudiosSection);
-    document.querySelector('.site-links a:last-child').textContent='Media teams';
+    const primarySiteLinks=[...document.querySelectorAll('.site-links a')];
+    [['#vertical-os','Workflow'],['#economics','Economics'],['#pricing','Pricing'],['#founding-studios','Founding studios']].forEach(([href,label],index)=>{if(primarySiteLinks[index]){primarySiteLinks[index].href=href;primarySiteLinks[index].textContent=label}});
     const autonomyPromise=[...document.querySelectorAll('.vertical-promise span')];
     if(autonomyPromise[0])autonomyPromise[0].textContent='AI WORKS FOR YOU';
     if(autonomyPromise[1])autonomyPromise[1].textContent='YOU DECIDE THE ART';
     document.querySelector('#photographers .site-kicker').textContent='FOR PHOTOGRAPHERS, VIDEOGRAPHERS + MEDIA TEAMS';
     document.querySelector('#photographers h2').innerHTML='More creating.<br><i>Less cleanup.</i>';
-    document.querySelector('.footer-brand p').textContent='Your turnaround date is tonight.';
+    document.querySelector('.footer-brand p').textContent='Your turnaround day is tonight.';
     document.querySelector('.footer-bottom span:last-child').textContent='Photo + video · from prompt to delivered';
     const howCards=[...document.querySelectorAll('#how .feature-grid article')];
     if(howCards[1]){howCards[1].querySelector('h3').textContent='Get the first pass.';howCards[1].querySelector('p').textContent='LensOS surfaces blur, shake, silence, weak takes, and the next handoff.';}
     const deliveryPromise=document.querySelector('#how .feature-grid article:nth-child(3)');
     if(deliveryPromise){deliveryPromise.querySelector('h3').textContent='Delivery by tonight.';deliveryPromise.querySelector('p').textContent='Move the work while the moment is still fresh.'}
+    if(false){
     const systemStory=document.createElement('section');
     systemStory.className='system-story';
     systemStory.id='system';
@@ -1040,6 +1391,7 @@
     updateSavings();
     const systemObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){systemStory.classList.add('system-live');systemObserver.unobserve(systemStory)}}),{threshold:.18});
     systemObserver.observe(systemStory);
+    }
     function render(){
       const q=questions[n], total=questions.length;
       $('counter').textContent=`QUESTION ${String(n+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
@@ -1724,29 +2076,42 @@
     $('resizer').addEventListener('pointermove',e=>{if(!dragging)return;const width=Math.max(270,Math.min(window.innerWidth*.58,e.clientX));document.querySelector('.page').style.setProperty('--side',`${width}px`)});
     $('resizer').addEventListener('pointerup',()=>{dragging=false;$('resizer').classList.remove('dragging')});
     const marketingLinks=[...document.querySelectorAll('.site-links a')];
-    [['Product','#live-product'],['The OS','#category'],['Economics','#economics'],['Pricing','#pricing']].forEach(([label,href],index)=>{if(!marketingLinks[index])return;marketingLinks[index].textContent=label;marketingLinks[index].href=href});
+    [['Workflow','#vertical-os'],['Economics','#economics'],['Pricing','#pricing'],['Open LensOS','#workspace']].forEach(([label,href],index)=>{if(!marketingLinks[index])return;marketingLinks[index].textContent=label;marketingLinks[index].href=href});
     const howSection=$('how');
     if(howSection){howSection.querySelector('.site-kicker').textContent='THE FIRST WEDGE';howSection.querySelector('h2').innerHTML='Built for jobs<br><i>where the deadline is real.</i>';const cards=[...howSection.querySelectorAll('article')],copy=[['01 / SPORTS','Thousands of frames. Minutes to move.'],['02 / EVENTS','One shoot. Several deadlines.'],['03 / VOLUME','Every handoff has a cost.']];cards.forEach((card,index)=>{card.querySelector('b').textContent=copy[index][0];card.querySelector('h3').textContent=copy[index][1];card.querySelector('p').textContent=['Local review and burst grouping.','Candidates, editor handoff, and packages.','One job record from ingest to paid.'][index]})}
     const foundingSection=$('photographers');
     if(foundingSection){foundingSection.querySelector('.site-kicker').textContent='FOUNDING STUDIOS';foundingSection.querySelector('h2').innerHTML='Bring one<br><i>real shoot.</i>';foundingSection.querySelector('button').textContent='Apply for the beta →'}
     function launchLensOS(){lensOSTrack('workspace_opened',{source:'marketing_product'});$('site').style.display='none';$('auditApp').style.display='none';openWorkspace();window.scrollTo({top:0,behavior:'instant'});setTimeout(()=>$('v3Input')?.focus(),80)}
+    if(marketingLinks[3])marketingLinks[3].onclick=event=>{event.preventDefault();launchLensOS()};
     $('heroStart').onclick=launchLensOS;$('siteStart').onclick=launchLensOS;$('foundingLaunch').onclick=launchLensOS;$('siteStart').textContent='Open LensOS →';
-    let heroRunTimers=[],heroHasRun=false;
-    function runHeroWorkflow(event){event?.preventDefault?.();const demo=$('heroDemoStatus');if(!demo){const box=$('heroProduct');if(box){['import','review','raw','adobe','tonight'].forEach((s,i)=>setTimeout(()=>{box.dataset.step=s;const live=$('heroProductLive');if(live)live.textContent=s;box.querySelectorAll('.hero-step').forEach(b=>b.classList.toggle('is-active',b.dataset.step===s))},i*700))}return}heroRunTimers.forEach(clearTimeout);heroRunTimers=[];const stages=[...demo.children],live=$('heroProductLive');stages.forEach(stage=>stage.classList.remove('active','done'));stages[0].classList.add('active');live.textContent='READING BRIEF';stages.forEach((stage,index)=>{heroRunTimers.push(setTimeout(()=>{stages.forEach((item,itemIndex)=>{item.classList.toggle('done',itemIndex<index);item.classList.toggle('active',itemIndex===index)});live.textContent=['INDEXING LOCALLY','SURFACING CANDIDATES','RATINGS READY','CLIENT LINK PREPARED'][index]},index*720))});heroRunTimers.push(setTimeout(()=>{stages.forEach(stage=>{stage.classList.remove('active');stage.classList.add('done')});live.textContent='REVIEW BEFORE SEND'},stages.length*720+180))}
-    $('heroCommand').addEventListener('submit',runHeroWorkflow);
-    const heroObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting&&!heroHasRun){heroHasRun=true;setTimeout(runHeroWorkflow,450)}}),{threshold:.42});heroObserver.observe(document.querySelector('.hero-product'));
-    const proofSteps=[...$('proofFlow').children];let proofTimers=[];
-    function proofMode(value){const text=value.toLowerCase();if(/video|recap|dead air/.test(text))return{project:'Event recap',meta:'LOCAL · 3 CLIPS · TECHNICAL PASS',labels:['Read brief','Index clips','Flag dead air','Prepare edit list','Build review link'],values:['READY','3 CLIPS','7 FLAGS','EDL','REVIEW'],outcome:'First cut ready'};if(/portrait|gallery|favorite/.test(text))return{project:'Portrait gallery',meta:'LOCAL · 628 PHOTOS · PROOFING',labels:['Read brief','Index photos','Group repeats','Prepare proofs','Build gallery'],values:['READY','628','25 SETS','25','PRIVATE'],outcome:'25 proofs ready'};return{project:'Arena game',meta:'LOCAL · 4,128 RAW · DEADLINE TONIGHT',labels:['Read brief','Index camera media','Surface candidates','Carry ratings','Prepare delivery'],values:['READY','4,128','40','ADOBE','TONIGHT'],outcome:'40 candidates ready'}}
-    function runProof(event){event?.preventDefault?.();const value=$('proofInput').value.trim()||'Take this shoot from card to client';const mode=proofMode(value);proofTimers.forEach(clearTimeout);proofTimers=[];$('proofCommandTitle').textContent=`“${value}”`;$('proofProject').textContent=mode.project;$('proofMeta').textContent=mode.meta;$('proofOutcome').classList.remove('ready');$('proofOutcome').querySelector('strong').textContent='Working locally';$('proofOutcome').querySelector('span').textContent='You approve every final decision.';proofSteps.forEach((step,index)=>{step.classList.remove('active','done');step.querySelector('b').textContent=mode.labels[index];step.querySelector('span').textContent=mode.values[index]});proofSteps[0].classList.add('active');proofSteps.forEach((step,index)=>proofTimers.push(setTimeout(()=>{proofSteps.forEach((item,itemIndex)=>{item.classList.toggle('done',itemIndex<index);item.classList.toggle('active',itemIndex===index)})},index*520)));proofTimers.push(setTimeout(()=>{proofSteps.forEach(step=>{step.classList.remove('active');step.classList.add('done')});$('proofOutcome').querySelector('strong').textContent=mode.outcome;$('proofOutcome').classList.add('ready')},proofSteps.length*520+160))}
-    document.querySelectorAll('[data-proof]').forEach(button=>button.onclick=()=>{$('proofInput').value=button.dataset.proof;$('proofCommandTitle').textContent=`“${button.dataset.proof}”`;runProof()});$('proofPrompt').addEventListener('submit',runProof);
     function updateEconomics(){const shoots=Number($('shootsInput').value),hours=Number($('hoursInput').value),rate=Number($('rateInput').value),returned=Number($('returnInput').value)/100,hoursMonth=shoots*hours*returned,annual=hoursMonth*rate*12,days=hoursMonth*12/8;$('shootsOut').textContent=shoots;$('hoursOut').textContent=hours;$('rateOut').textContent=`$${rate}`;$('returnOut').textContent=`${Math.round(returned*100)}%`;$('hoursBack').textContent=Math.round(hoursMonth).toLocaleString();$('daysBack').textContent=Math.round(days).toLocaleString();$('annualValue').textContent=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(annual)}
     ['shootsInput','hoursInput','rateInput','returnInput'].forEach(id=>$(id).addEventListener('input',updateEconomics));updateEconomics();
-    /* Old auto-film parallax removed — image stays locked; steps are hover-driven */
-
+    const cursorFlow=$('cursorFlow');
+    if(cursorFlow){
+      const cursorSteps=[...cursorFlow.querySelectorAll('.cursor-step')];
+      const cursorScenes=[...cursorFlow.querySelectorAll('.cursor-scene')];
+      function setCursorStep(step){
+        cursorFlow.dataset.step=step;
+        cursorSteps.forEach(button=>{const selected=button.dataset.step===step;button.setAttribute('aria-selected',String(selected));button.tabIndex=selected?0:-1});
+        cursorScenes.forEach(scene=>scene.setAttribute('aria-hidden',String(scene.dataset.scene!==step)));
+      }
+      cursorSteps.forEach((button,index)=>{
+        button.addEventListener('pointerenter',()=>setCursorStep(button.dataset.step));
+        button.addEventListener('focus',()=>setCursorStep(button.dataset.step));
+        button.addEventListener('click',()=>setCursorStep(button.dataset.step));
+        button.addEventListener('keydown',event=>{
+          const direction=event.key==='ArrowRight'||event.key==='ArrowDown'?1:event.key==='ArrowLeft'||event.key==='ArrowUp'?-1:0;
+          if(!direction&&event.key!=='Home'&&event.key!=='End')return;
+          event.preventDefault();
+          const nextIndex=event.key==='Home'?0:event.key==='End'?cursorSteps.length-1:(index+direction+cursorSteps.length)%cursorSteps.length;
+          cursorSteps[nextIndex].focus();
+        });
+      });
+    }
     const revealItems=document.querySelectorAll('.site-section,.quote,.vertical-os');
     revealItems.forEach(item=>item.classList.add('reveal'));
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target)}}),{threshold:.18});
     revealItems.forEach(item=>observer.observe(item));
-    window.addEventListener('scroll',()=>{const y=window.scrollY;document.querySelector('.site-hero').style.setProperty('--hero-shift',`${Math.min(100,y*.12)}px`);document.querySelector('.hero-proof').style.transform=`translateY(${Math.min(70,y*.08)}px)`;document.querySelector('.site-nav').classList.toggle('scrolled',y>10)},{passive:true});
+    window.addEventListener('scroll',()=>document.querySelector('.site-nav').classList.toggle('scrolled',window.scrollY>10),{passive:true});
   </script>
 </body></html>

@@ -97,3 +97,10 @@ QA → `/qa` or `/browse` · Diff → `/review` · Ship PR → `/ship` or **lens
 
 ## Data safety
 Client galleries + shoot session in IndexedDB. Treat as user data. No secret commits.
+
+## UI writing
+- Read and follow `AGENTS.md` before changing the product surface.
+- Prefer one concise, self-explanatory label.
+- Do not add helper copy unless it prevents a real mistake.
+- Never restate a heading beneath itself.
+- Do not use em dashes or generic AI product language.
