@@ -63,6 +63,14 @@ npm run site
 - Spine locked: Import → Pick → Adobe → Send.
 - **Before a major UI redesign** (workspace empty, nav, hero, shell): **prompt CEO with options.** Do not free-solo another layout.
 - Empty state must feel like a **working photo OS**, not a chatbot landing with helper essays.
+- **Grok is market research + eng implementer, not lead designer.** Design taste = Melani. Ship UI only from her direction.
+
+## Market research mode (default when strategy, not pixels)
+When Melani asks about the business, competitors, pricing, or “who we beat,” run research first:
+- Incumbents: Adobe LR/PS, Aftershoot / AI cull, Pixieset / ShootProof / gallery, Capture One, PhotoMechanic
+- Pain: multi-week turnaround (cull volume, queue, grade, export)
+- Wedge: pick speed + client send around Adobe — not color science
+- Output: short structured brief (who, price, gap, how we win) — no design essays
 
 ## CTO bar
 - Correctness first. Empty import, one photo, huge folder, offline, double-click.
