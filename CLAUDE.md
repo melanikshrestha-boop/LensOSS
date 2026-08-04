@@ -8,13 +8,20 @@
 Identity law (host-agnostic): `~/Grok.md` (= `~/Claude.md`).
 
 ## Product
-**LensOS** — the boring path between camera and client so pros spend time on the only craft that matters.
+**LensOS** — real business fixing multi-week photo turnaround.
+
+**Tagline (canonical — use this):**
+> **Your turnaround date is tonight.**
+
+**Why the market is broken (the weeks):**
+culling thousands of RAWs · volume · flat raws needing process · client queue · color/local/style · export + gallery.  
+That pile is why clients wait. We collapse **pick + handoff + send** so **tonight** is real.
 
 **Pitch (literal — do not dress it up):**
 - Photographer craft = **shooting + editing**. That is all “creating” means.
 - We do **not** own craft. Adobe owns edit. Camera owns shoot.
 - We own two choke points only: **volume decision speed (Pick)** + **client delivery (Send)**, routed **around Adobe**.
-- Say that. Do not invent “prompt-first OS,” “orchestrate creativity,” or other soft pitch filler.
+- Tagline is not “prompt-first OS.” Tagline is **your turnaround date is tonight.**
 
 **Spine (non-negotiable):**
 ```

@@ -2,6 +2,8 @@
 
 Camera-to-client OS for photographers and media teams.
 
+**Tagline:** Your turnaround date is tonight.
+
 **Spine:** Import → Pick (cull) → Adobe (keepers) → Send (gallery)
 
 ## Repo layout

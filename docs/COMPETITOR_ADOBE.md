@@ -115,6 +115,8 @@ Adobe can afford catalog sprawl. **We cannot.** Lazy visitor = one scroll, one b
 ## Product positioning (CTO lock)
 
 ```
+Tagline:               Your turnaround date is tonight.
+Market pain:           multi-week post (cull volume, raws, queue, grade, export)
 Craft (all of it):     shoot + edit. Nothing else is "creating."
 Adobe owns:            edit / pixels / develop / industry files
 Camera owns:           shoot
@@ -124,7 +126,7 @@ LensOS owns:           Pick (volume decision speed) + Send (client path) around 
 That’s the whole pitch. Don’t pad it.
 
 Never compete on color science or Firefly.  
-Win = **same-night card → selects → client link** so shoot + edit get the hours back.
+Win = **same-night card → selects → client link** — turnaround date tonight, not next week.
 
 **Spine stays non-negotiable:**
 ```

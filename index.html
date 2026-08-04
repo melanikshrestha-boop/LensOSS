@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LensOS | camera to client</title>
+  <title>LensOS | your turnaround date is tonight</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
@@ -782,7 +782,7 @@
     if(priceCards[0]){priceCards[0].querySelector('.plan-description').textContent='For learning the LensOS rhythm on personal photo and video work.';priceCards[0].querySelectorAll('li')[1].textContent='Local camera-media previews';priceCards[0].querySelectorAll('li')[2].textContent='First-pass technical check';}
     if(priceCards[1]){priceCards[1].querySelector('.plan-description').textContent='For working creators delivering client media every week.';priceCards[1].querySelectorAll('li')[2].textContent='Photo culling + video first cuts';priceCards[1].querySelectorAll('li')[4].textContent='Adobe + editor handoff';}
     if(priceCards[2])priceCards[2].querySelector('.plan-description').textContent='For high-volume studios and media teams working on deadlines.';
-    $('vertical-os').querySelector('.vertical-os-wrap').innerHTML=`<div class="vertical-os-copy"><div class="site-kicker">CAMERA TO CLIENT</div><h2>Export by<br><i>tonight.</i></h2></div><div class="shoot-flow" id="shootFlow" data-step="export"><div class="shoot-stage"><div class="shoot-still" aria-hidden="true"></div><div class="shoot-grade" aria-hidden="true"></div><div class="shoot-layer layer-import" aria-hidden="true"><div class="import-chip"><div class="sd">SD</div><div class="import-meta"><small>01 / IMPORT</small><b>4,128 RAW</b><em>Local · untouched</em></div></div></div><div class="shoot-layer layer-review" aria-hidden="true"><div class="film-strip"><i></i><i></i><i></i><i></i><i></i></div></div><div class="shoot-layer layer-edit" aria-hidden="true"><div class="adobe-bar"><span>RATINGS CARRIED</span><span>OPEN IN ADOBE ↗</span></div></div><div class="shoot-layer layer-export" aria-hidden="true"><div class="export-mark"><small>EXPORT BY</small><strong>TONIGHT.</strong></div></div></div><div class="shoot-top"><div class="shoot-brand">Lens<b>OS</b></div><div class="shoot-live"><i></i><span>HOVER STEPS</span></div></div><div class="shoot-hud" id="shootHud"><small>04 / SEND</small><b>Export by tonight</b><span>Turnaround time is TONIGHT.</span></div><div class="shoot-steps" role="tablist" aria-label="Workflow steps"><button type="button" class="shoot-step" data-step="import" role="tab"><small>01</small><b>Import</b></button><button type="button" class="shoot-step" data-step="review" role="tab"><small>02</small><b>Review</b></button><button type="button" class="shoot-step" data-step="edit" role="tab"><small>03</small><b>Adobe</b></button><button type="button" class="shoot-step is-active" data-step="export" role="tab"><small>04</small><b>Export by tonight</b></button></div></div>`;
+    $('vertical-os').querySelector('.vertical-os-wrap').innerHTML=`<div class="vertical-os-copy"><div class="site-kicker">CAMERA TO CLIENT</div><h2>Your turnaround<br><i>date is tonight.</i></h2></div><div class="shoot-flow" id="shootFlow" data-step="export"><div class="shoot-stage"><div class="shoot-still" aria-hidden="true"></div><div class="shoot-grade" aria-hidden="true"></div><div class="shoot-layer layer-import" aria-hidden="true"><div class="import-chip"><div class="sd">SD</div><div class="import-meta"><small>01 / IMPORT</small><b>4,128 RAW</b><em>Local · untouched</em></div></div></div><div class="shoot-layer layer-review" aria-hidden="true"><div class="film-strip"><i></i><i></i><i></i><i></i><i></i></div></div><div class="shoot-layer layer-edit" aria-hidden="true"><div class="adobe-bar"><span>RATINGS CARRIED</span><span>OPEN IN ADOBE ↗</span></div></div><div class="shoot-layer layer-export" aria-hidden="true"><div class="export-mark"><small>YOUR TURNAROUND DATE</small><strong>TONIGHT.</strong></div></div></div><div class="shoot-top"><div class="shoot-brand">Lens<b>OS</b></div><div class="shoot-live"><i></i><span>HOVER STEPS</span></div></div><div class="shoot-hud" id="shootHud"><small>04 / SEND</small><b>Your turnaround date is tonight</b><span>Not next week. Tonight.</span></div><div class="shoot-steps" role="tablist" aria-label="Workflow steps"><button type="button" class="shoot-step" data-step="import" role="tab"><small>01</small><b>Import</b></button><button type="button" class="shoot-step" data-step="review" role="tab"><small>02</small><b>Review</b></button><button type="button" class="shoot-step" data-step="edit" role="tab"><small>03</small><b>Adobe</b></button><button type="button" class="shoot-step is-active" data-step="export" role="tab"><small>04</small><b>Tonight</b></button></div></div>`;
 
     /* Cursor on step boxes drives the film — image never moves */
     (function wireShootSteps(){
@@ -792,7 +792,7 @@
         import:{k:'01 / IMPORT',t:'4,128 originals',s:'Card in. Local. Untouched.'},
         review:{k:'02 / REVIEW',t:'312 candidates',s:'You make the final call.'},
         edit:{k:'03 / ADOBE',t:'Edits wipe on',s:'Grade film · right to left. Photo locked.'},
-        export:{k:'04 / SEND',t:'Export by tonight',s:'Turnaround time is TONIGHT.'}
+        export:{k:'04 / SEND',t:'Your turnaround date is tonight',s:'Not next week. Tonight.'}
       };
       function setStep(step){
         flow.dataset.step=step;
@@ -823,14 +823,12 @@
     /* Adobe-style marquee: one short outcome line, rotates. No body essay. */
     siteHero.querySelector('.site-kicker').textContent='LENSOS / CAMERA TO CLIENT';
     const heroTaglines=[
+      'Your turnaround<br><i>date is tonight.</i>',
       'Turnaround time<br><i>is TONIGHT.</i>',
       'Export by<br><i>tonight.</i>',
-      'Create at the<br><i>highest level.</i>',
-      'Go create<br><i>more art.</i>',
       'Shoot more.<br><i>Edit more.</i>',
       'Card in.<br><i>Client ready.</i>',
-      'You make the<br><i>final call.</i>',
-      'From shoot<br><i>to sent.</i>'
+      'You make the<br><i>final call.</i>'
     ];
     const heroH1=siteHero.querySelector('h1');
     heroH1.innerHTML=`<span class="tagline-rotate" id="heroTagline"><span class="tagline-line tagline-fade">${heroTaglines[0]}</span></span>`;
