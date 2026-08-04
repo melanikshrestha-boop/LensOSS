@@ -1,27 +1,47 @@
 # LensOS
 
-LensOS is a camera-to-client workspace for photographers and media teams.
+Camera-to-client OS for photographers and media teams.
 
-This repository contains the current product prototype, workflow research, backend notes, and database schema.
+**Spine:** Import → Pick (cull) → Adobe (keepers) → Send (gallery)
 
-## Preview locally
+## Repo layout
+
+| Path | Role |
+|------|------|
+| `app/` | **Product** — Vite + React Pick studio |
+| Root (`index.html`, …) | Marketing / interactive prototype |
+| `CLAUDE.md` | Agent + CEO/CTO law |
+| `DAILY.md` / `SHIP_LOG.md` | Daily ship rhythm |
+
+## Local
 
 ```bash
-python3 -m http.server 8000
+# Product (Pick)
+cd ~/Projects/LensOSS
+npm install --prefix app   # first time
+npm run dev
+# → http://127.0.0.1:5173/
+
+# Prototype / marketing
+npm run site
+# → http://127.0.0.1:8000/
 ```
 
-Open [http://localhost:8000](http://localhost:8000).
+## Configuration (prototype)
 
-## Configuration
-
-Authentication and analytics are disabled until their public configuration values are added to:
+Auth/analytics stay off until public values are set in:
 
 - `auth-config.js`
 - `analytics-config.js`
 
-Never commit private service keys. The browser should receive public client configuration only.
+Never commit private service keys.
 
-## Current status
+## Status
 
-This is an ambitious interactive product prototype. The local photo and video experiences demonstrate the intended workflow, but production culling, editing, storage, authentication, analytics, and Adobe handoff still require their respective native and backend services.
+- **Pick app** ships real cull (keyboard, loupe, stacks, 2-up compare).
+- Root prototype is the vertical-OS story and research surface.
+- Production cloud auth, analytics, and multi-machine storage are staged — not day-one blockers.
 
+## Ship law
+
+User-visible progress every day. Agents: see `CLAUDE.md`.

@@ -1,0 +1,13 @@
+{
+  "name": "lensoss",
+  "private": true,
+  "version": "0.1.0",
+  "description": "LensOS monorepo — marketing prototype at root, Pick app under app/",
+  "scripts": {
+    "dev": "npm run dev --prefix app",
+    "build": "npm run build --prefix app",
+    "lint": "npm run lint --prefix app",
+    "preview": "npm run preview --prefix app",
+    "site": "python3 -m http.server 8000 --bind 127.0.0.1"
+  }
+}
