@@ -4,6 +4,19 @@ Newest first.
 
 ---
 
+## 2026-08-04 — Landing for lazy humans (one page)
+**Target:** Too many prototype pages/essays. One smooth hero. One CTA.  
+**Shipped:**
+- Replaced fat multi-surface `index.html` with single landing (hero + product mock + Open Pick)
+- Full prior prototype archived as `index.full-prototype.html` (not deleted)
+- Spine only: Import → Pick → Adobe → Send  
+- Writing cut to ~5 lines of product copy  
+
+**Done when:** `:8000` is one screen, Start → Pick app.  
+**Next:** Deploy static hosting if desired; deep-link production Pick URL when hosted.
+
+---
+
 ## 2026-08-04 — LensOSS monorepo open + Pick app + stack 2-up
 **Target:** Melani’s product home = `melanikshrestha-boop/LensOSS`. CTO ops + real app + compare.  
 **Shipped:**
